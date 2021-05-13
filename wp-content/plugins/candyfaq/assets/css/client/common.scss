@@ -1,0 +1,80 @@
+/**
+ * Client common styles
+ */
+
+@mixin unstyledLink {
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+  border-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+    text-decoration: none;
+  }
+}
+
+.mkb-container {
+  padding: 0 2em;
+  margin: 0 auto;
+  max-width: 100%;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.mkb-root {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 15px;
+  font-weight: 300;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.8em;
+    padding: 0;
+  }
+
+  .fa {
+    width: auto;
+    height: auto;
+    top: auto;
+    bottom: auto;
+    margin: auto;
+  }
+}
+
+.mkb-clearfix,
+.ks-clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.mkb-hidden,
+.ks-hidden {
+  display: none;
+}
+
+.mkb-shortcode-container {
+  font-size: 15px;
+  color: #333;
+  font-weight: 300;
+}
+
+.mkb-section-title {
+  text-align: center;
+}

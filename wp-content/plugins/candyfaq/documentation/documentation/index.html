@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Candy FAQ - Smart FAQ module for WordPress with Analytics</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Candy FAQ&rdquo; Documentation by &ldquo;KonstruktStudio&rdquo; v1.0.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">Candy FAQ - Smart FAQ module for WordPress with Analytics</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 1/20/2018<br>
+					By: KonstruktStudio<br>
+					Email: <a href="mailto:konstrukteam@gmail.com">konstrukteam@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our plugin. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/KonstruktStudio">here</a>. Thank you so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#features">Features</a></li>
+			<li><a href="#install">Installation</a></li>
+			<li><a href="#add-content">Adding content</a></li>
+			<li><a href="#adding-shortcodes">Adding shortcodes</a></li>
+			<li><a href="#sorting">Sorting</a></li>
+			<li><a href="#rating">Rating</a></li>
+			<li><a href="#filter">Filter</a></li>
+			<li><a href="#dashboard">Dashboard</a></li>
+			<li><a href="#ga">Google Analytics</a></li>
+			<li><a href="#localization">Localization</a></li>			
+		</ol>
+
+		<h3 id="features"><strong>Features</strong> - <a href="#toc">top</a></h3>
+		<p>
+			<ul>
+				<li>Instant live FAQ filter</li>
+				<li>Questions are organised in categories</li>
+				<li>Visual shortcode builder</li>
+				<li>Visual Composer mappings available</li>
+				<li>Unlimited design options</li>
+				<li>Customers can vote for questions and leave feedback</li>
+				<li>Analytics dashboard, with views, likes and dislikes weekly / monthly graph</li>
+				<li>Easy drag n drop questions reorder</li>
+				<li>Show or hide question views, likes and dislikes buttons and count with custom icons</li>
+				<li>Powerful options panel</li>
+				<li>Style presets available</li>
+				<li>Typography with 600+ Google fonts</li>
+				<li>Responsive design</li>
+				<li>Documentation</li>
+				<li>Translation ready</li>
+			</ul>
+		</p>
+		
+		<hr>
+		
+		<h3 id="install"><strong>Installation</strong> - <a href="#toc">top</a></h3>
+
+		<p>First of all, you need to install plugin. Login to your WordPress admin and go to Plugins -> Add new.</p>
+
+		<p><img src="assets/images/install-plugin.png" style="max-width: 480px; height: auto;"/></p>
+
+		<p>Then click <b>Upload Plugin</b> button at the top of the screen, Choose the zip file you have received after purchasing item and press <b>Install now</b></p>
+		
+		<p><img src="assets/images/upload-plugin.png"/></p>
+			
+		<p>After the plugin has been installed, press <b>Activate</b>. After that you should see new Candy FAQ section under Posts. This means you have successfully installed and activated plugin.</p>
+
+		<p><img src="assets/images/candy-menu.png"/></p>
+
+		<h3 id="add-content"><strong>Adding Content</strong> - <a href="#toc">top</a></h3>
+
+		<p>
+			Adding FAQ questions is very similar to creating posts in WordPress. Title is used for question and content is used for answer. To create new question, go to <strong>Candy FAQ</strong> / <strong>Add New question</strong>, write title, edit content, select (or create new) category for it and press <strong>Publish</strong>. After that this question and answer will be available for use on any page or post via shortcodes or <strong>Visual Composer</strong> module.
+		</p>
+
+		<p><img src="assets/images/candy-edit.png"/></p>
+
+		<p>Note, that all questions should belong to some category, because categories are used in shortcodes.</p>
+
+
+
+
+		<h3 id="adding-shortcodes"><strong>Adding Shortcodes</strong> - <a href="#toc">top</a></h3>
+
+		<p>When you have your FAQ content ready, you can display it on pages and posts. To do it, open the page you want to add FAQ to, select an empty line in content editor and press shortcode icon in editor panel.</p>
+
+		<p><img src="assets/images/candy-short.png" style="max-width: 40em;"/></p>
+
+		<p>This will open new shortcode dialog.</p>
+
+		<p><img src="assets/images/candy-short-edit.png"/></p>
+
+		<p>Here you can select FAQ module options and select categories you want to display on this page. You can leave categories empty to show all questions. Note, that you can reorder categories in the right part of term selector.</p>
+
+		<p><img src="assets/images/candy-cats.png" style="max-width: 40em;"/></p>
+
+		<p>By default, only necessary settings are visible in shortcode, so that you can configure desired appearance and behaviour once in plugin settings and insert different categories quickly on different pages. But you can of course go on and override style preset directly in shortcode.</p>
+
+		<p><img src="assets/images/candy-sc-preset.png" style="max-width: 30em;"/></p>
+
+		<p>After tweaking desired options, press <strong>Insert</strong>. Shortcode will be added to editor. Press <strong>Update</strong> to save page. FAQ module should be added to page content.</p>
+
+		<p><img src="assets/images/candy-page-shortcode.png" style="max-width: 50em;"/></p>
+
+		<p>Once you add shortcode to content, you can also edit it easily. To do this simply select shortcode in editor and press Candy FAQ icon once again. Our shortcode builder will edit added shortcode instead of adding new. Just make sure you have selected the whole shortcode.</p>
+
+		<p><img src="assets/images/candy-shortcode-edit.png" style="max-width: 40em;"/></p>
+
+		<p>You can also use Visual Composer module to add FAQ. We've added mappings for all shortcode options.</p>
+
+		<p><img src="assets/images/candy-vc.png" style="max-width: 40em;"/></p>
+
+
+
+
+		<h3 id="sorting"><strong>Sorting</strong> - <a href="#toc">top</a></h3>
+
+		<p>FAQ questions have flexible sorting options. By default, custom sorting is enabled in settings.</p>
+
+		<p><img src="assets/images/candy-sort-option.png" style="max-width: 40em;"/></p>
+
+		<p>In this mode you can go to <strong>Candy FAQ</strong> - <strong>Sorting</strong> and simply reorder your questions via drag n drop.</p>
+
+		<p><img src="assets/images/candy-sort.png" style="max-width: 50em;"/></p>
+
+		<p>You can also turn custom sorting off and use predefined sorting, similar to how WordPress posts are ordered.</p>
+
+		<p><img src="assets/images/candy-sort-other.png" style="max-width: 30em;"/></p>
+
+
+
+
+		<h3 id="rating"><strong>Rating</strong> - <a href="#toc">top</a></h3>
+
+		<p>You can allow customers to leave rating (Likes or Dislikes) for each question. Rating has lots of styling options and it is tracked to analytics module, so you can analyze usefulness of your answers and improve them.</p>
+
+		<p><img src="assets/images/candy-rating-settings.png" style="max-width: 50em;"/></p>
+
+		<p><img src="assets/images/candy-rate-btns.png" style="max-width: 30em;"/></p>
+
+		<p>You can also show message after customers vote and allow them to post feedback (see Feedback in Settings).</p>
+
+
+
+
+		<h3 id="filter"><strong>Filter</strong> - <a href="#toc">top</a></h3>
+
+		<p>FAQ items can be quickly searched using instant filter. Filter uses content already on page, no requests to server are made, so it works very fast. After customer types 2 or more character all items that do not have this text in title or content are hidden. If search matches single item, it can be set to open automatically.</p>
+
+		<p><img src="assets/images/candy-filter.png" style="max-width: 30em;"/></p>
+
+		<p>Empty categories are hidden and categories count is updated. Visitor can press clear to see all answers again.</p>
+
+
+
+
+		<h3 id="dashboard"><strong>Dashboard</strong> - <a href="#toc">top</a></h3>
+
+		<p>Candy FAQ Dashboard allows you to quickly see what's going on with you FAQ questions. At the top you can see FAQ statistics.</p>
+
+		<p><img src="assets/images/candy-dashboard.png" style="max-width: 50em;"/></p>
+
+		<p>On the graph you can see how many likes, dislikes and views were tracked during each day. Note, that View is tracked when visitor toggles question open. View for each question is only tracked once during a single page view.</p>
+
+		<p><img src="assets/images/candy-graph.png" style="max-width: 50em;"/></p>
+
+		<p>At the bottom you can see the charts with best and worst questions. You can use these to improve your content and make answers more helpful.</p>
+
+		<p><img src="assets/images/candy-charts.png" style="max-width: 50em;"/></p>
+
+
+
+		<h3 id="ga"><strong>Google Analytics</strong> - <a href="#toc">top</a></h3>
+
+		<p>You can track FAQ events, such as <strong>view</strong>, <strong>like</strong>, <strong>dislike</strong> and <strong>feedback</strong> directly to your Google Analytics dashboard. Note, that your site must use <strong>analytics.js</strong> script, not Google Tag Manager. Also note, that our plugin does not add GA tracking code to your site, this is usually done via theme settings or directly in header template.</p>
+		<p>In Settings, select options you want to track and configure the event fields. You can use either question title or ID to track events.</p>
+
+		<p><img src="assets/images/candy-ga-settings.png" style="max-width: 50em;"/></p>
+
+		<p>After users perform some interactions, your Google Analytics should receive custom events. Note, that sometimes events are not displayed until some time passes, especially for new accounts.</p>
+
+		<p><img src="assets/images/candy-ga-overview.png" style="max-width: 50em;"/></p>
+
+		<p><img src="assets/images/candy-ga-events.png" style="max-width: 50em;"/></p>
+
+
+
+
+		<h3 id="localization"><strong>Localization</strong> - <a href="#toc">top</a></h3>
+		<p>Candy FAQ is written according to WordPress i18n guidelines, so it can be translated easily.</p>
+
+		<p><img src="assets/images/candy-i18n.png" style="max-width: 50em;"/></p>
+
+		<p>First of all, if you simply need to translate it into single language, all strings used on client side are available via plugin settings.</p>
+
+		<p><img src="assets/images/candy-strings.png" style="max-width: 50em;"/></p>
+
+		<p>If you need a multilingual site, our plugin works with WPML out of the box. Note, that you will need String Translation extension to translate strings, that are stored in database (plugin Settings). The process is same as for any content translated via WPML.</p>
+
+		<hr>
+	
+		
+		<p>Once again, thank you so much for purchasing Candy FAQ. We are always glad to help you if you have any questions relating to this item. If you have a more general question relating to the items on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>KonstruktStudio</strong></p>
+		<p><a href="#toc">Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

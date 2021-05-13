@@ -1,0 +1,19 @@
+.wpb_candy-faq,
+.wpb-layout-element-button[data-element="candy-faq"] {
+  .vc_element-icon {
+    background: none;
+
+    &:before {
+      content: '';
+      font-size: 28px;
+      line-height: 28px;
+      width: 32px;
+      height: 28px;
+      display: inline-block;
+      text-align: center;
+      background-image: url('../../img/faq-icon.png');
+      background-size: contain;
+      background-position: center center;
+    }
+  }
+}

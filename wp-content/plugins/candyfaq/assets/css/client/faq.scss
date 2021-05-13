@@ -1,0 +1,354 @@
+/**
+ * FAQ
+ */
+.mkb-faq-item-hidden,
+.mkb-faq-section-hidden {
+  display: none;
+}
+
+.kscf-faq {
+  position: relative;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+
+  &.kscf-faq--w-shadow {
+    box-shadow: 1px 2px 20px rgba(0,0,0,0.12);
+  }
+
+  .wp-caption .wp-caption-text {
+    color: inherit;
+  }
+}
+
+.kb-faq__filter-form {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.kscf-faq-category__count {
+  font-size: .6em;
+  line-height: .8em;
+  padding: .3em .5em;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: .3em;
+  margin-left: .5em;
+}
+
+/**
+ * FAQ filter
+ */
+.kscf-faq-filter {
+  width: 16em;
+  max-width: 100%;
+  position: relative;
+  float: left;
+
+  .kscf-faq-filter__input {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0.8em 1.3em;
+    height: 50px;
+    font-size: 1em;
+    -webkit-appearance: none; /* fixes ios input styles */
+  }
+
+  &.kscf-faq-filter--round-theme {
+    .kscf-faq-filter__input {
+      height: 50px;
+      border-radius: 25px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &.kscf-faq-filter--invisible-theme {
+    .kscf-faq-filter__input {
+      border-bottom: 2px solid #aaa;
+    }
+  }
+
+  .kscf-faq-filter__clear {
+    @include unstyledLink;
+  }
+
+  .kscf-faq-filter__clear,
+  .kscf-faq-filter__icon {
+    color: #888;
+    text-decoration: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 22px;
+    bottom: 0;
+    margin: auto;
+    height: 22px;
+    line-height: 1em;
+    box-shadow: none;
+  }
+
+  .kscf-faq-filter__icon {
+    display: none;
+  }
+
+  &--empty {
+    .kscf-faq-filter__clear {
+      display: none;
+    }
+
+    .kscf-faq-filter__icon {
+      display: block;
+    }
+  }
+}
+
+.kscf-faq__no-results {
+  text-align: center;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+/**
+ * Toggle all
+ */
+.kscf-faq-toggle-all {
+  float: right;
+
+  .kscf-faq-toggle-all__link {
+    @include unstyledLink;
+
+    display: inline-block;
+    color: inherit;
+    outline: none;
+    height: 2.5em;
+    line-height: 2.5em;
+    font-size: 1.3em;
+    border-radius: 2.5em;
+    padding: 0 0.85em;
+    border: 1px solid transparent;
+    box-shadow: none;
+    text-decoration: none;
+    transition: all 0.15s ease-in;
+
+    &--open {
+      .kscf-faq-toggle-all__label-closed {
+        display: none;
+      }
+
+      .kscf-faq-toggle-all__label-open {
+        display: inline;
+      }
+    }
+  }
+
+  .kscf-faq-toggle-all__icon {
+    margin-right: 0.3em;
+    text-decoration: none;
+    outline: none;
+    font-size: 22px;
+    height: 22px;
+    position: relative;
+    line-height: 1em;
+  }
+
+  .kscf-faq-toggle-all__label-open {
+    display: none;
+  }
+}
+
+/**
+ * FAQ category title
+ */
+.kscf-faq-category__title {
+  font-weight: 600;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+
+/**
+ * FAQ questions
+ */
+.kscf-faq-questions {
+  .kscf-faq-questions-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    .kscf-faq-question {
+      position: relative;
+      padding: 0;
+
+      &.kscf-faq-question--open {
+        border-color: rgba(0,0,0,0);
+      }
+    }
+
+    &--with-shadow {
+      .kscf-faq-question__title {
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.22);
+      }
+    }
+  }
+
+  .kscf-faq-question__icon,
+  .kscf-faq-question__icon-open{
+    position: absolute;
+    left: 0.6em;
+    top: 0;
+    bottom: 0;
+    height: 1em;
+    margin: auto;
+
+    .kscf-faq--height-high & {
+      left: 0.8em;
+    }
+  }
+}
+
+/**
+ * Icon actions
+ */
+/* change */
+.kscf-faq--q-icon-change {
+  /* standard icon */
+  .kscf-faq-question__icon {
+    display: inline-block;
+  }
+
+  .kscf-faq-question--open {
+    .kscf-faq-question__icon {
+      display: none;
+    }
+  }
+
+  /* open icon */
+  .kscf-faq-question__icon-open {
+    display: none;
+  }
+
+  .kscf-faq-question--open {
+    .kscf-faq-question__icon-open {
+      display: inline-block;
+    }
+  }
+}
+
+/* rotate */
+.kscf-faq--q-icon-rotate {
+  .kscf-faq-question__icon {
+    transition: transform 0.15s ease-in;
+  }
+
+  .kscf-faq-question--open {
+    .kscf-faq-question__icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+/**
+ * Question
+ */
+.kscf-faq-question__title {
+  position: relative;
+  padding: 0.4em 0.6em;
+  display: block;
+  font-size: 1.5em;
+  line-height: 1em;
+  transition: all 0.15s ease-in;
+
+  .kscf-faq--q-icon & {
+    padding-left: 2em;
+  }
+
+  .kscf-faq--height-medium & {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+  }
+
+  .kscf-faq--height-high & {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+  }
+
+  .kscf-faq--rounded & {
+    border-radius: 0.9em;
+  }
+
+  .kscf-faq--rounded.kscf-faq--height-medium & {
+    border-radius: 1.1em;
+  }
+
+  .kscf-faq--rounded.kscf-faq--height-high & {
+    border-radius: 1.8em;
+  }
+
+  .kscf-faq-question--open & {
+    border-color: rgba(0,0,0,0);
+  }
+}
+
+/**
+ * Answer
+ */
+.kscf-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+
+  .kscf-faq--w-ans-shadow & {
+    box-shadow: inset 0 0px 5px rgba(0,0,0,0.12);
+  }
+
+  .kscf-faq--rounded & {
+    margin: 0 1.1em;
+  }
+
+  .kscf-faq--rounded.kscf-faq--height-medium & {
+    margin: 0 1.4em;
+  }
+
+  .kscf-faq--rounded.kscf-faq--height-high & {
+    margin: 0 1.6em;
+  }
+
+  .kscf-faq-answer__content {
+    padding: 1em 1.3em 1em 1.3em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Responsive
+ */
+@media (max-width: 640px) {
+  .kscf-faq {
+    .kscf-faq-filter,
+    .kscf-faq-toggle-all {
+      width: 100%;
+      float: none;
+      clear: both;
+      margin-bottom: 1em;
+      text-align: right;
+    }
+
+    .kscf-faq-questions {
+      .kscf-faq-questions__title {
+        font-size: 1.2em;
+        line-height: 1.2em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
+    }
+  }
+}

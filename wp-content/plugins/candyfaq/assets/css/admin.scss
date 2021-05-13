@@ -1,0 +1,34 @@
+/**
+ * MinervaKB admin pages styles
+ */
+
+// variables
+@import 'admin/common/variables';
+
+// common
+@import 'admin/common/common';
+@import 'admin/common/buttons';
+@import 'admin/common/header';
+@import 'admin/common/preloader';
+@import 'admin/common/popup';
+@import 'admin/common/shortcodes';
+@import 'admin/common/vc';
+
+// settings
+@import 'admin/common/settings/settings';
+@import 'admin/common/settings/tabs';
+
+// dashboard
+@import 'admin/pages/dashboard/dashboard';
+@import 'admin/pages/dashboard/overview';
+@import 'admin/pages/dashboard/feedback';
+@import 'admin/pages/dashboard/reset';
+
+// settings
+@import 'admin/pages/settings/settings';
+
+// sorting
+@import 'admin/pages/sorting/sorting';
+
+// faq sigle edit
+@import 'admin/pages/faq/feedback';

@@ -1,0 +1,26 @@
+/**
+ * Admin variables
+ */
+
+$minerva-blue: #00a0d2;
+$featured: #F7931E;
+$wp-blue: #0073aa;
+
+$success: #4BB651;
+$danger: #C85C5E;
+
+$switch-on: #42d75c;
+$switch-off: #f1f1f1;
+$switch-bg: #ddd;
+
+$icon-selected: orange;
+
+@mixin icon() {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 0.3em;
+}

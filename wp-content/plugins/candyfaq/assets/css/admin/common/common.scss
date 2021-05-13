@@ -1,0 +1,80 @@
+// link without browser styling
+.mkb-unstyled-link {
+  text-decoration: none;
+  outline: none;
+  border: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+}
+
+@mixin unstyledLink {
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+}
+
+// float clear
+.mkb-clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.mkb-hidden {
+  display: none!important;
+}
+
+.mkb-pressed {
+  box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.5);
+  background: #bbb;
+}
+
+.mkb-request-pending {
+  opacity: 0.7;
+}
+
+/**
+ * Toastr
+ */
+#toast-container {
+  &.toast-top-right {
+    top: 152px;
+    right: 1.2em;
+  }
+}
+
+/* Articles list columns */
+
+.column-mkb_views,
+.column-mkb_feedback,
+.column-mkb_likes,
+.column-mkb_dislikes {
+  width: 5em;
+}
+
+#adminmenu #menu-posts-kscf_faq .wp-menu-image img {
+  width: 20px;
+  height: auto;
+  padding-top: 7px;
+}
