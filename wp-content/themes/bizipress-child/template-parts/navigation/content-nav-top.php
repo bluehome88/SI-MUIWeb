@@ -36,39 +36,9 @@ if ($top_menu == 'menu-1') {
 <div id="top-bar" class="<?php echo esc_attr($top_class); ?>">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4 col-sm-4 col-xs-12">
-				<?php if ($top_menu != 'menu-5') { ?>
-					<ul class="top-info">
-						<?php
-						if (defined('FW')) :
-							$top_details = bizipress_get_option('top_contact_details');
-							foreach ($top_details as $details) :
-						?><li><span class="info-icon"><i class="<?php echo esc_attr($details['icon']) ?>"></i></span>
-									<div class="info-wrapper">
-										<p class="info-text"><?php echo esc_html($details['info']) ?></p>
-									</div>
-								</li>
-						<?php
-							endforeach;
-						endif;
-						?>
-					</ul>
-				<?php
-				} else {
-					wp_nav_menu(array(
-						'theme_location' => 'top_menu',
-						//									'container_class'	 => 'navbar-responsive-collapse ' . $pull_right,
-						'menu_class'	 => 'top-menu unstyled ',
-						'fallback_cb'	 => 'news247_primary_menu_fallback',
-						'menu_id'		 => 'top-bar-menu',
-					));
-				}
-				?>
-			</div>
 			<!--/ Top info end -->
-			<div class="col-md-5 col-sm-5 col-xs-12 topBarAlignment252">
-				<div></div><span class="col-md-10 col-sm-10 col-xs-12 callUs">Call Us: <a href="tel:12644973525"> +1 264 497 3525</a></span>
-				<ul class="top-social col-md-2 col-sm-2 col-xs-12">
+			<div class="col-md-9 col-sm-9 col-xs-12 topBarAlignment252">
+				<ul class="top-social col-md-12 col-sm-12 col-xs-12">
 					<li>
 						<?php
 						if (defined('FW')) :
@@ -82,7 +52,7 @@ if ($top_menu == 'menu-1') {
 				</ul>
 			</div>
 			<!--/ Top social end -->
-			<div class="col-md-2 col-sm-2 col-xs-12 padno252 ">
+			<div class="col-md-3 col-sm-3 col-xs-12 padno252 ">
 				<div class="countrysel dropdown">
 					<button type="button" id="country_list_btn" class="conBTN btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					</button>

@@ -22,3 +22,6 @@ node_modules/
 *.sql
 *.sqlite
 wp-config.php
+wp-content/uploads/fw-backup/
+
+wp-content/uploads/hummingbird-assets/

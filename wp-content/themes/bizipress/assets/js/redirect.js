@@ -92,11 +92,10 @@ const replaceUrl = (url) => {
 
 $(document).on('ready', function () {
   country = getCookie('country');
-console.log(country);
   if (country != undefined) {
     country_name = $('.country_redirect_li[data-country_redirect="' + country + '"]')[0]['innerText'];
     $('#country_list_btn').html(
-      '<div class="sprite ' + country + '"></div>' + country_name + '<span class="caret caret252"></span>'
+      country_name + '<div class="sprite ' + country + '"></div>' +  '<span class="caret caret252"></span>'
     );
 
     if ($('.social252 a').eq(0).length) {

@@ -1,0 +1,30 @@
+/* Top Nav Menu*/
+.top-bar.solid-bg{
+	background: #f5f5f5 !important;
+}
+#top-bar span.callUs, #top-bar span.callUs a, #top-bar .top-social i, button.conBTN.btn.btn-default.dropdown-toggle{
+	color: #004C7C;
+}
+span.caret.caret252{
+	border-top-color: #004C7C !important;
+	border: none;
+	/* float: right; */
+}
+span.caret.caret252::after{
+	font-family: FontAwesome;
+	content: "\f107";
+	position: absolute;
+	bottom: 3px;
+	font-size: 18px;
+}
+.top-social{
+	text-align: right;
+}
+#top-bar .top-social a{
+	margin-right: 20px !important;
+}
+#top-bar #country_list_btn .sprite{
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}

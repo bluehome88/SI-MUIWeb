@@ -247,3 +247,8 @@ function category_has_parent($catid){
     }
     return false;
 }
+
+function custom_style_sheet() {
+    wp_enqueue_style( 'custom-styling', get_stylesheet_directory_uri() . '/assets/css/custom.css' );
+}
+add_action('wp_head', 'custom_style_sheet');
