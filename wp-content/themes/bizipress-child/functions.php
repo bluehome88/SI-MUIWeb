@@ -247,8 +247,11 @@ function category_has_parent($catid){
     }
     return false;
 }
-
-function custom_style_sheet() {
-    wp_enqueue_style( 'custom-styling', get_stylesheet_directory_uri() . '/assets/css/custom.css' );
+if ( !function_exists( 'custom_style_sheet' ) ) {
+    function custom_style_sheet() {
+        wp_enqueue_style( 'custom-styling', get_stylesheet_directory_uri() . '/assets/css/custom.css' );
+        wp_enqueue_style( 'fontawesome5', get_stylesheet_directory_uri() . '/assets/css/fontawesome.min.css' );
+        wp_enqueue_style( 'fontawesome-solid', get_stylesheet_directory_uri() . '/assets/css/solid.min.css' );
+    }
+    add_action('wp_head', 'custom_style_sheet');
 }
-add_action('wp_head', 'custom_style_sheet');

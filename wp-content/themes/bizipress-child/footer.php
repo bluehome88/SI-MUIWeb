@@ -182,10 +182,11 @@ if (pathname == "business"){
 	document.getElementById("MainHeader252").style.textAlign = "left";
 
 }
-else { 		document.getElementById("menu-item-59").style.backgroundColor="white";
+else { 		
+	// document.getElementById("menu-item-59").style.backgroundColor="white";
 	//document.getElementById("menu-item-59").style.color='#014b7a';
 	
-	document.getElementById("menu-item-59").className += " active252";
+	// document.getElementById("menu-item-59").className += " active252";
 
 }
 
