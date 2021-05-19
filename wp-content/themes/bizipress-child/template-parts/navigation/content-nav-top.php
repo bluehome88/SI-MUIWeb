@@ -56,19 +56,19 @@ if ($top_menu == 'menu-1') {
 						</button>
 						<ul class="dropdown-menu contryList252">
 							<li class="country_redirect_li" data-country_redirect="anguilla">
-								<div class='sprite anguilla'></div>Anguilla
+								<div class='sprite anguilla'></div> <span>Anguilla</span>
 							</li>
 							<li class="country_redirect_li" data-country_redirect="antiguaandbarbuda">
 								<div class='sprite antiguaandbarbuda'></div> Antigua & Barbuda
 							</li>
 							<li> <a href="https://www.massyunited.com/">
-									<div class='sprite aruba'></div>Aruba
+									<div class='sprite aruba'></div> Aruba
 								</a></li>
 							<li class="country_redirect_li" data-country_redirect="bahamas">
 								<div class='sprite bahamas'></div> Bahamas
 							</li>
 							<li class="country_redirect_li" data-country_redirect="barbados">
-								<div class='sprite barbados'></div> Barbados
+								<div class='sprite barbados'></div> <span>Barbados</span>
 							</li>
 							<li class="country_redirect_li" data-country_redirect="belize">
 								<div class='sprite belize'></div> Belize
@@ -80,37 +80,37 @@ if ($top_menu == 'menu-1') {
 								<div class='sprite cayman'></div> Cayman Islands
 							</li>
 							<li> <a href="https://www.massyunited.com/">
-									<div class='sprite curacao'></div>Curacao
+									<div class='sprite curacao'></div> Curacao
 								</a></li>
 							<li class="country_redirect_li" data-country_redirect="dominica">
-								<div class='sprite dominica'></div>Dominica
+								<div class='sprite dominica'></div> Dominica
 							</li>
 							<li class="country_redirect_li" data-country_redirect="grenada">
-								<div class='sprite grenada'></div>Grenada
+								<div class='sprite grenada'></div> Grenada
 							</li>
 							<li class="country_redirect_li" data-country_redirect="montserrat">
-								<div class='sprite montserrat'></div>Montserrat
+								<div class='sprite montserrat'></div> Montserrat
 							</li>
 							<li class="country_redirect_li" data-country_redirect="guyana">
-								<div class='sprite guyana'></div>Guyana
+								<div class='sprite guyana'></div> Guyana
 							</li>
 							<li class="country_redirect_li" data-country_redirect="jamaica">
-								<div class='sprite jamaica'></div>Jamaica
+								<div class='sprite jamaica'></div> Jamaica
 							</li>
 							<li class="country_redirect_li" data-country_redirect="stkittsandnevis">
-								<div class='sprite stkitts'></div>St. Kitts & Nevis
+								<div class='sprite stkitts'></div> St. Kitts & Nevis
 							</li>
 							<li class="country_redirect_li" data-country_redirect="stlucia">
-								<div class='sprite stlucia'></div>St. Lucia
+								<div class='sprite stlucia'></div> St. Lucia
 							</li>
 							<li class="country_redirect_li" data-country_redirect="stvincentandthegrenadines">
-								<div class='sprite stvincentandthegrenadines'></div>St. Vincent & the Grenadines
+								<div class='sprite stvincentandthegrenadines'></div> St. Vincent & the Grenadines
 							</li>
 							<li class="country_redirect_li" data-country_redirect="trinidadandtobago">
-								<div class='sprite trinidad_and_tobago'></div>Trinidad and Tobago
+								<div class='sprite trinidad_and_tobago'></div> Trinidad and Tobago
 							</li>
 							<li class="country_redirect_li" data-country_redirect="turksandcaicos">
-								<div class='sprite turks'></div>Turks & Caicos
+								<div class='sprite turks'></div> Turks & Caicos
 							</li>
 						</ul>
 					</div>

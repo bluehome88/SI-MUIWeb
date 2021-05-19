@@ -95,7 +95,7 @@ $(document).on('ready', function () {
   if (country != undefined) {
     country_name = $('.country_redirect_li[data-country_redirect="' + country + '"]')[0]['innerText'];
     $('#country_list_btn').html(
-      country_name + '<div class="sprite ' + country + '"></div>' +  '<span class="caret caret252"></span>'
+      '<span>'+country_name + '</span><div class="sprite ' + country + '"></div>' +  '<span class="caret caret252"></span>'
     );
 
     if ($('.social252 a').eq(0).length) {
