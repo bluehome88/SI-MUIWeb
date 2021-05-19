@@ -4,6 +4,8 @@
 }
 #top-bar span.callUs, #top-bar span.callUs a, #top-bar .top-social i, button.conBTN.btn.btn-default.dropdown-toggle{
 	color: #004C7C;
+	font-size: 16px;
+	padding-top: 11px;
 }
 span.caret.caret252{
 	border-top-color: #004C7C !important;
@@ -22,11 +24,15 @@ span.caret.caret252::after{
 }
 #top-bar .top-social a{
 	margin-right: 20px !important;
+	font-size: 16px;
 }
-#top-bar #country_list_btn .sprite{
+.sprite{
     margin-left: 10px;
     margin-right: 10px;
     vertical-align: middle;
+}
+#top-bar #country_list_btn > span{
+	vertical-align: middle;
 }
 /* header */
 .header{
@@ -76,14 +82,18 @@ span.caret.caret252::after{
 	position: inherit !important;
 }
 #header nav .ubermenu-submenu{
-	/* background: white; */
+	text-align: center;
 }
 .ubermenu.ubermenu-disable-submenu-scroll .ubermenu-item>.ubermenu-submenu.ubermenu-submenu-type-mega{
-	padding: 15px 0px 10px;
+	/* padding: 15px 0px 10px; */
     border-top: 5px solid #FFD400;
 }
 #header .ubermenu-nav{
 	text-align: right;
+}
+#header .ubermenu-nav > li > a{
+	font-weight: bold;
+	font-size: 16px;
 }
 #header ul.top-info.unstyled{
 	margin-top: 3%;
@@ -98,10 +108,9 @@ span.caret.caret252::after{
 	display: none;
 }
 .ubermenu .ubermenu-tab-layout-left>.ubermenu-tabs-group>.ubermenu-tab>.ubermenu-tab-content-panel{
-	box-shadow: inset 20px 0px 20px -20px #bdb5b5ad;
 	padding-left: 40px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .ubermenu .ubermenu-tab-layout-left>.ubermenu-tabs-group{
 	border-width: 0;
@@ -144,9 +153,9 @@ span.caret.caret252::after{
 	background: #FFD400;
     font-weight: bold;
     color: black;
-    padding: 5px 10px;
+    padding: 8px 15px;
     border-radius: 7px;
-    font-size: 18px;
+    font-size: 16px;
 }
 .ubermenu .ubermenu-submenu-type-stack>.ubermenu-item-normal>.ubermenu-target{
 	padding-left: 35px;
@@ -241,6 +250,7 @@ a.ubermenu-target.vault{
     align-items: center;
     display: flex;
     flex-direction: column;
+    box-shadow: 20px 0px 20px -15px #bdb5b563;
 }
 .ubermenu .ubermenu-item-type-column>.ubermenu-submenu-type-stack{
 	padding-top: 0;
@@ -257,8 +267,13 @@ a.ubermenu-target.vault{
 	margin-top: 10px;
     margin-bottom: 10px;
 }
-
-
+.ubermenu ul.ubermenu-row-id-5411{
+	padding: 20px 0 15px;
+	display: inline-block;
+}
+ul.ubermenu-row-id-5411 > li:not(:first-child){
+	border-left: 1px solid #CBCBCB;
+}
 
 
 
