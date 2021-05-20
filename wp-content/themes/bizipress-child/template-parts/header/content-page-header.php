@@ -1,6 +1,6 @@
 <?php
 /**
- * Blog Header
+ * Content Page Header
  *
  */
  
@@ -34,3 +34,25 @@ if ( defined( 'FW' ) ) {
 		$overlay = '<div class="header-overlay" style="background-color:' . $header_overlay . '"></div>';
 	}
 }
+
+if (!is_front_page()) { ?>
+<div id="banner-area" class="banner-area" <?php echo wp_kses_post( $bg_image ); ?>>
+	<?php
+	echo bizipress_kses( $overlay );
+	?>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="banner-heading">
+					<h1 class="banner-title"><?php echo esc_html( $heading ); ?></h1>
+						<?php
+							if ( function_exists('yoast_breadcrumb') ) {
+							  yoast_breadcrumb( '<p class="breadcrumb">','</p>' );
+							}
+						?>
+				</div>
+			</div><!-- Col end -->
+		</div><!-- Row end -->
+	</div><!-- Container end -->
+</div><!-- Banner area end --> 
+<?php } ?>
