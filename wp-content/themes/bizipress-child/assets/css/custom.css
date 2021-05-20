@@ -127,7 +127,7 @@ span.caret.caret252::after{
 }
 .menu-quote h3{
     color: black !important;
-    font-size: 18px !important;
+    font-size: 16px !important;
     font-weight: bold;
     margin-bottom: 25px;
 }
@@ -155,7 +155,7 @@ span.caret.caret252::after{
     color: black;
     padding: 8px 15px;
     border-radius: 7px;
-    font-size: 16px;
+    font-size: 15px;
 }
 .ubermenu .ubermenu-submenu-type-stack>.ubermenu-item-normal>.ubermenu-target{
 	padding-left: 35px;
@@ -274,7 +274,9 @@ a.ubermenu-target.vault{
 ul.ubermenu-row-id-5411 > li:not(:first-child){
 	border-left: 1px solid #CBCBCB;
 }
-
+.ubermenu ul.ubermenu-row-id-5411 .ubermenu-custom-content-padded{
+	padding: 15px 15px
+}
 /* Header Responsive */
 @media (max-width: 1200px)
 {
@@ -287,10 +289,22 @@ ul.ubermenu-row-id-5411 > li:not(:first-child){
 	.ubermenu-main .ubermenu-item-level-0 > .ubermenu-target{
 		margin-bottom: 0;
 	}
+	#header .site-nav-inner nav {
+		padding: 0 15px;
+	}
 	#header nav .ubermenu-submenu{
 		background: white;
 	}
-	ul.ubermenu-row-id-5411 > li{
+	.menu-quote h3{
+		font-size: 15px !important;
+	}
+	.ubermenu ul.ubermenu-row-id-5411{
+		min-width: 80%;
+	}
+	.ubermenu ul.ubermenu-row-id-5411 .ubermenu-custom-content-padded{
+		padding: 15px 10px
+	}
+	ul.ubermenu-row-id-5411 > li:not(:first-child){
 		border-width: 0;
 	}
 	.ubermenu .ubermenu-tab-layout-left>.ubermenu-tabs-group,
