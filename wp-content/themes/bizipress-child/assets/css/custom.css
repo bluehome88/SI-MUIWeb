@@ -327,7 +327,28 @@ ul.ubermenu-row-id-5411 > li:not(:first-child){
 	}
 }
 
-
-
-
+/* Product Page style */
+.breadcrumb_container{
+	position: inherit;
+	background: #004c7c;
+}
+.breadcrumb_container span a, .breadcrumb_container .breadcrumb_last{
+	color: white;
+	display: inline-block;
+	padding: 10px 0;
+	margin-right: 15px;
+	font-weight: normal;
+}
+.breadcrumb_container span a::after{
+	font-family: FontAwesome;
+	content: "\f054";
+	position: absolute;
+	bottom: 9px;
+	font-size: 13px;
+	margin-left: 5px;
+}
+.breadcrumb_container span a:hover{
+	/* font-weight: bold; */
+	text-decoration: underline;
+}
 
