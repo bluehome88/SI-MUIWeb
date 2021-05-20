@@ -277,6 +277,14 @@ ul.ubermenu-row-id-5411 > li:not(:first-child){
 .ubermenu ul.ubermenu-row-id-5411 .ubermenu-custom-content-padded{
 	padding: 15px 15px
 }
+#header nav .ubermenu-submenu.ubermenu-submenu-id-5401, 
+#header nav .ubermenu-submenu.ubermenu-submenu-id-5432,
+#header nav .ubermenu-submenu.ubermenu-submenu-id-5424{
+	background-image: url("../img/menu-bg.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 /* Header Responsive */
 @media (max-width: 1200px)
 {
