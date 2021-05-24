@@ -8,6 +8,11 @@
 get_header();
 
 get_template_part('template-parts/header/content', 'page-banner');
+$country = $_COOKIE['country'];
+
+$product_data = get_field( "product_".$country );
+if( $product_data == "" )
+	$product_data = get_field( "product_barbados" );
 ?>
 <div class="main-content blog-wrap" role="main">
 	<div class="container">
@@ -28,6 +33,7 @@ get_template_part('template-parts/header/content', 'page-banner');
 						<!-- Article content -->
 						<div class="entry-content">
 							<?php the_content(); ?>
+							<?php echo $product_data; ?>
 							<?php wp_link_pages(); ?>
 						</div> <!-- end entry-content -->
 

@@ -9,6 +9,7 @@ if ( defined( 'FW' ) ) {
 	//Page settings
 	$page_heading	 = fw_get_db_post_option( $post->ID, 'header_title' );
 	$header_image	 = fw_get_db_post_option( $post->ID, 'header_image' );
+	$header_brief	 = fw_get_db_post_option( $post->ID, 'header_brief' );
 
 
 
@@ -47,14 +48,9 @@ if (!is_front_page()) { ?>
 			<div class="row">
 				<div class="banner_card">
 					<label><?php the_title(); ?></label>
-					<h3>All hands on deck</h3>
-					<p>Whether it is your cargo at sea, your personal yacht or water sports equipment, we know how important protecting your investment is.</p>
+					<h3><?php echo esc_html( $heading ); ?></h3>
+					<p><?php echo esc_html( $header_brief ); ?></p>
 				</div>
-				<!--div class="col-xs-12">
-					<div class="banner-heading">
-						<h1 class="banner-title"><?php echo esc_html( $heading ); ?></h1>
-					</div>
-				</div><!-- Col end -->
 			</div><!-- Row end -->
 		</div><!-- Container end -->
 		<div class="right_div"></div>

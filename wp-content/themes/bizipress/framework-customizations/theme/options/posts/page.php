@@ -15,6 +15,11 @@ $options = array(
 				'label'	 => esc_html__( 'Banner title', 'bizipress' ),
 				'desc'	 => esc_html__( 'Add your Service hero title', 'bizipress' ),
 			),
+			'header_brief'	 => array(
+				'type'	 => 'text',
+				'label'	 => esc_html__( 'Banner Brief', 'bizipress' ),
+				'desc'	 => esc_html__( 'Add your Service hero description', 'bizipress' ),
+			),
 			'header_image'	 => array(
 				'label'	 => esc_html__( ' Banner Image', 'bizipress' ),
 				'desc'	 => esc_html__( 'Upload a Page header image', 'bizipress' ),
