@@ -46,11 +46,13 @@ if (!is_front_page()) { ?>
 		<div class="left_div"></div>
 		<div class="container">
 			<div class="row">
+				<?php if($heading) { ?>
 				<div class="banner_card">
 					<label><?php the_title(); ?></label>
 					<h3><?php echo esc_html( $heading ); ?></h3>
 					<p><?php echo esc_html( $header_brief ); ?></p>
 				</div>
+			<?php } ?>
 			</div><!-- Row end -->
 		</div><!-- Container end -->
 		<div class="right_div"></div>

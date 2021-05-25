@@ -27,7 +27,6 @@ if( $product_data == "" )
 								<figure class="entry-thumbnail"><?php the_post_thumbnail(); ?></figure>
 							<?php endif; ?>
 
-							<h1 id="MainHeader252"><?php the_title(); ?></h1>
 						</header> <!-- end entry-header -->
 
 						<!-- Article content -->

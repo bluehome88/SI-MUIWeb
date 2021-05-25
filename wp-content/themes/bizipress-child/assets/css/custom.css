@@ -1,4 +1,7 @@
 /* Top Nav Menu*/
+.main-content{
+	padding-top: 50px !important;
+}
 .top-bar.solid-bg{
 	background: #f5f5f5 !important;
 }
@@ -377,11 +380,18 @@ ul.ubermenu-row-id-5411 > li:not(:first-child){
 	font: normal normal normal 20px Open Sans;
     line-height: 35px !important;
 }
+.slant252_small{
+	font: normal normal normal 18px Open Sans;
+    line-height: 25px !important;
+}
+p.italic{
+	font-style: italic!important;
+}
 .wpb_text_column .page-description{
     font-size: 30px !important;
     color: #FF7B00!important;
     text-align: center;
-    width: 60%;
+    width: 80%;
     margin: 40px auto 50px;
 }
 .button_container{
@@ -408,6 +418,7 @@ ul.ubermenu-row-id-5411 > li:not(:first-child){
     font-size: 20px;
     margin-bottom: 20px;
     font-family: "Open Sans";
+    display: flex;
 }
 .tab_wrapper ul.option_list li i{
 	color: #00AEE7;
@@ -426,6 +437,9 @@ ul.ubermenu-row-id-5411 > li:not(:first-child){
     margin: 0;
     display: table;
     width: 100%;
+}
+.tab_wrapper ul.button_bar.spacer{
+	margin-top: 200px!important;
 }
 .tab_wrapper ul.button_bar li{
 	text-align: center;
