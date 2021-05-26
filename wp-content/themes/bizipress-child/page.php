@@ -12,7 +12,7 @@ $country = $_COOKIE['country'];
 
 $product_data = get_field( "product_".$country );
 if( $product_data == "" )
-	$product_data = get_field( "product_barbados" );
+	$product_data = get_field( "product_default" );
 ?>
 <div class="main-content blog-wrap" role="main">
 	<div class="container">
