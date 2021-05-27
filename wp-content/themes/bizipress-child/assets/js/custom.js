@@ -4,6 +4,9 @@ jQuery( document ).ready( function ( $ ) {
     .not('[href="#"]')
     .not('[href="#0"]')
     .click(function(event) {
+
+      if( $(this).parent().hasClass("vc_tta-tab") )
+          return;
       // On-page links
       if (
         location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
