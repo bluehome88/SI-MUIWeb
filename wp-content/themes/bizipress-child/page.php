@@ -21,11 +21,14 @@ if( $product_data == "" )
 				<?php while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<!-- Article header -->
-						<header class="entry-header"> <?php
-														if (has_post_thumbnail() && !post_password_required()) :
-														?>
+						<header class="entry-header"> 
+							<?php
+							// hide for e-service page
+							if( get_the_ID()!=5592 && get_the_ID() != 5617 && get_the_ID() != 5619 && get_the_ID() != 5621 ) { 
+								
+							if (has_post_thumbnail() && !post_password_required()) : ?>
 								<figure class="entry-thumbnail"><?php the_post_thumbnail(); ?></figure>
-							<?php endif; ?>
+							<?php endif; } ?>
 
 						</header> <!-- end entry-header -->
 
@@ -54,5 +57,9 @@ if( $product_data == "" )
 
 		</div>
 	</div>
+	<?php
+	if (has_post_thumbnail() && !post_password_required()) : ?>
+		<figure class="entry-footer-banner"><?php the_post_thumbnail('full'); ?></figure>
+	<?php endif; ?>
 </div>
 <?php get_footer(); ?>

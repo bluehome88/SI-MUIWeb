@@ -506,6 +506,7 @@ p.italic{
     padding-left: 15px;
     overflow: hidden;
     max-width: 100%;
+    padding-bottom: 30px;
 }
 #banner-area .banner_card label{
 	color: #004C7C;
@@ -527,7 +528,6 @@ p.italic{
     font-family: Open Sans;
     color: #004C7C;
     line-height: 24px !important;
-    margin-bottom: 30px;
     margin-top: 20px;
 }
 /* contents page responsive */
@@ -669,4 +669,114 @@ p.italic{
 .page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a:hover i.vc_tta-icon.fa,
 .page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a:hover span.vc_tta-title-text{
 	color: #004C7C;
+}
+
+/* E-Service page */
+.entry-footer-banner img{
+	width: 100% !important;
+}
+.e-service-row{
+	display: flex;
+}
+.e-service-row p{
+	color: #004C7C !important;
+	font-family: "Open Sans";
+	letter-spacing: 0px;
+	font-size: 22px;
+    line-height: 35px !important;	
+}
+.e-service-row h3.page-description{
+	font-weight: bold;
+    font-size: 35px !important;
+    padding-top: 70px;
+}
+.e-service-row h3{
+	font-size: 30px !important;
+    line-height: 50px;
+    color: #004C7C !important;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.e-service-row ul.option_list{
+	padding:0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.e-service-row ul.option_list li{
+    line-height: 24px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: "Open Sans";
+    display: flex;
+    color: #004C7C;
+}
+.e-service-row ul.option_list li i{
+	color: #00AEE7;
+	font-size: 20px;
+	margin-right: 5px;
+	padding-top: 2px;
+}
+.e-service-row a.btn{
+	background: transparent linear-gradient(180deg, #FF9400 0%, #FF7F00 100%) 0% 0% no-repeat padding-box;
+	border-radius: 40px;
+	color: white;
+	font-size: 16px;
+	padding: 15px 30px;
+    margin-top: 20px;
+}
+.blue{
+	color: #004c7c;
+}
+.wpcf7-container .wpcf7 form input[type=text], 
+.wpcf7-container .wpcf7 form input[type=tel],
+.wpcf7-container .wpcf7 form input[type=email],
+.wpcf7-container .wpcf7 form input[type=number],
+.wpcf7-container .wpcf7 form input[type=date],
+.wpcf7-container .wpcf7 form select,
+.wpcf7-container .wpcf7 form textarea{
+	background: transparent linear-gradient(180deg, #EDEDED 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+	border: 1px solid #E6E6E6 !important;
+    border-radius: 8px;
+    outline: none !important;
+}
+.wpcf7-container .wpcf7 .quote_fieldset{
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 10px rgba(0,0,0,0.29);
+	border-radius: 15px;
+	padding: 40px 50px;
+	margin-bottom: 40px;
+}
+.wpcf7-container .wpcf7 .fieldset_label{
+	font-size: 28px;
+    line-height: 30px;
+    font-family: "Open Sans";
+    font-weight: bold;
+	letter-spacing: 0px;
+	color: #004C7C;
+    margin: 30px auto;
+}
+.wpcf7-container .wpcf7 .form-group{
+	font-size: 20px;
+    line-height: 45px;
+    font-family: "Open Sans";
+    color: #8D8D8D;
+    margin-bottom: 25px;
+    text-indent: 5px;
+}
+.wpcf7-container .wpcf7 .footer_btn{
+	text-align: center;
+}
+.wpcf7-container .wpcf7 .footer_btn .wpcf7-form-control.wpcf7-submit{
+	float: none;
+	text-transform: capitalize;
+	padding: 5px 40px;
+	background: transparent linear-gradient(180deg, #FF9400 0%, #FF7F00 100%) 0% 0% no-repeat padding-box !important;
+	font-size: 20px;
+	height: auto;
+}
+.wpcf7-container .wpcf7 .ajax-loader{
+/* 	display: none; */
+    position: absolute;
+    bottom: 53px;
 }
