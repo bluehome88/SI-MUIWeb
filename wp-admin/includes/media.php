@@ -3822,3 +3822,36 @@ function wp_media_attach_action( $parent_id, $action = 'attach' ) {
 		exit;
 	}
 }
+
+function wp_getimagesize( $filename, array &$image_info = null ) {
+	if (
+		// Skip when running unit tests.
+		! defined( 'WP_RUN_CORE_TESTS' )
+		&&
+		// Return without silencing errors when in debug mode.
+		defined( 'WP_DEBUG' ) && WP_DEBUG
+	) {
+		if ( 2 === func_num_args() ) {
+			return getimagesize( $filename, $image_info );
+		} else {
+			return getimagesize( $filename );
+		}
+	}
+
+	/*
+	 * Silencing notice and warning is intentional.
+	 *
+	 * getimagesize() has a tendency to generate errors, such as
+	 * "corrupt JPEG data: 7191 extraneous bytes before marker",
+	 * even when it's able to provide image size information.
+	 *
+	 * See https://core.trac.wordpress.org/ticket/42480
+	 */
+	if ( 2 === func_num_args() ) {
+		// phpcs:ignore WordPress.PHP.NoSilencedErrors
+		return @getimagesize( $filename, $image_info );
+	} else {
+		// phpcs:ignore WordPress.PHP.NoSilencedErrors
+		return @getimagesize( $filename );
+	}
+}
