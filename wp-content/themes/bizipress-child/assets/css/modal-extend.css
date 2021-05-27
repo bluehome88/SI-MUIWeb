@@ -45,7 +45,7 @@
     font-family: 'Open Sans';
 }
 .modal.in .modal-dialog a:hover h3{
-	color: #fc6a2a;
+	color: #fc6a2a !important;
 }
 .modal.in .modal-dialog img{
 	width: 50%;
