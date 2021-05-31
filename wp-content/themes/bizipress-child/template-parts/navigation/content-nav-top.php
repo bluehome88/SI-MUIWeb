@@ -38,7 +38,7 @@ if ($top_menu == 'menu-1') {
 		<div class="row">
 			<!--/ Top info end -->
 			<div class="col-md-12 col-sm-12 col-xs-12 topBarAlignment252">
-				<ul class="top-social col-md-10 col-sm-10 col-xs-12">
+				<ul class="top-social col-md-9 col-sm-10 col-xs-12">
 					<li>
 						<?php
 						if (defined('FW')) :
@@ -50,7 +50,7 @@ if ($top_menu == 'menu-1') {
 						endif;
 						?></li>
 				</ul>
-				<div class="col-md-2 col-sm-2 col-xs-12 padno252 ">
+				<div class="col-md-3 col-sm-2 col-xs-12 padno252 ">
 					<div class="countrysel dropdown">
 						<button type="button" id="country_list_btn" class="conBTN btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						</button>

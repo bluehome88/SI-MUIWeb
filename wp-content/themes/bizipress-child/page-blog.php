@@ -8,7 +8,7 @@
 
 <?php get_header(); 
 
-get_template_part( 'template-parts/header/content', 'page-header' );
+get_template_part('template-parts/header/content', 'page-banner');
 ?>
 <div class="main-content blog-wrap"  role="main">
     <div class="container">

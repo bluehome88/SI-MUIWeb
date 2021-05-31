@@ -1,4 +1,7 @@
 /* Top Nav Menu*/
+*{
+	outline: none !important;
+}
 .main-content{
 	padding-top: 50px !important;
 }
@@ -654,7 +657,7 @@ p.italic{
 	background: white !important;
 }
 .page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab{
-	width: 18%;
+	width: 15%;
 }
 .page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab i.vc_tta-icon.fa,
 .page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab span.vc_tta-title-text
@@ -881,4 +884,9 @@ p.italic{
 #eservice-claim ul.option_list li i{
 	font-size: 30px;
 	margin-right: 10px;
+}
+
+/* handle multi */
+.ubermenu a.ubermenu-target.country{
+	display: none;
 }
