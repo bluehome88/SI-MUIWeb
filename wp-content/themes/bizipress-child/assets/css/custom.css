@@ -665,7 +665,7 @@ p.italic{
 	color: #ADADAD;
 }
 .page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a:hover{
-	background: transparent;
+	background-color: transparent;
 }
 .page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab.vc_active i.vc_tta-icon.fa,
 .page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab.vc_active span.vc_tta-title-text,
@@ -889,4 +889,42 @@ p.italic{
 /* handle multi */
 .ubermenu a.ubermenu-target.country{
 	display: none;
+}
+.page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a{
+	width: 100%;
+    padding-top: 50px;
+    fill: #ebebeb;
+    height: 30px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+.page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a i{
+	color: transparent !important;
+}
+.page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a[href="#motor"]{
+    background-image: url("../img/menu-motor.svg") !important;
+    background-size: 35% ;
+}
+.page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a[href="#home"]{
+    background-image: url("../img/menu-home.svg") !important;
+    background-size: 22% ;
+}
+.page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a[href="#business"]{
+    background-image: url("../img/menu-business.svg") !important;
+    background-size: 23% ;
+}
+.page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a[href="#marine"]{
+    background-image: url("../img/menu-marine.svg") !important;
+    background-size: 26% ;
+}
+.page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a[href="#yacht"]{
+    background-image: url("../img/menu-yacht.svg") !important;
+    background-size: 24% ;
+}
+.page.page-id-52 ul.vc_tta-tabs-list .vc_tta-tab a[href="#other"]{
+    background-image: url("../img/menu-travel.svg") !important;
+    background-size: 20% ;
+}
+.footer-social.social-color ul li a i.fa-youtube-play{
+	background-color: red;
 }

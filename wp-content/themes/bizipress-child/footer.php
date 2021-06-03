@@ -129,7 +129,7 @@ $scrollup	 = bizipress_get_option( 'scrollup' );
 				<div class="col-sm-4 text-right">
 					<div class="footer-social social-color">
 						<ul>
-						<li> <a href="/anguilla/newsletter"><img src="/anguilla/wp-content/uploads/2019/03/SUBSCRIBE.png" class="newsletter252"></a></li>
+						<li> <a href="/newsletter"><img src="/wp-content/uploads/2019/03/SUBSCRIBE.png" class="newsletter252"></a></li>
 							<?php foreach ( (array) $footer_bg_setting[ 'two' ][ 'footer_social' ] as $social ): ?>
 								<li><a title="<?php echo esc_html( $social[ 'title' ] ); ?>" href="<?php echo esc_url( $social[ 'link' ] ); ?>"><i class="<?php echo esc_attr( $social[ 'icon' ] ); ?>"></i></a></li>
 							<?php endforeach; ?>
@@ -218,5 +218,7 @@ if (isSafari == true){
 } 
   
 </script>
-
+<?php
+	get_template_part('template-parts/content', 'quote');
+?>
 </html>
