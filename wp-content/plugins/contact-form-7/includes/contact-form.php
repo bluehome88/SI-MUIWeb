@@ -578,7 +578,7 @@ class WPCF7_ContactForm {
 		);
 
 		$validation_errors = sprintf(
-			'<ul>%s</ul>',
+			'<ul role="status">%s</ul>',
 			implode( "\n", $validation_errors )
 		);
 
