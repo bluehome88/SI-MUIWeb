@@ -771,6 +771,7 @@ p.italic{
 }
 .wpcf7-container .wpcf7 .footer_btn{
 	text-align: center;
+	position: relative;
 }
 .wpcf7-container .wpcf7 .footer_btn .wpcf7-form-control.wpcf7-submit{
 	float: none;
@@ -783,7 +784,7 @@ p.italic{
 .wpcf7-container .wpcf7 .ajax-loader{
 /* 	display: none; */
     position: absolute;
-    bottom: 53px;
+    bottom: 13px;
 }
 #cover-table{
 	font-family: "Open Sans";

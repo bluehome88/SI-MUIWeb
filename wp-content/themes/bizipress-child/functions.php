@@ -207,13 +207,14 @@ remove_action( 'auth_cookie_bad_username',   'rest_cookie_collect_status' );
 remove_action( 'auth_cookie_bad_hash',       'rest_cookie_collect_status' );
 remove_action( 'auth_cookie_valid',          'rest_cookie_collect_status' );
 remove_filter( 'rest_authentication_errors', 'rest_cookie_check_errors', 100 );
+/*
 remove_action( 'init',          'rest_api_init' );
 remove_action( 'rest_api_init', 'rest_api_default_filters', 10, 1 );
 remove_action( 'parse_request', 'rest_api_loaded' );
 remove_action( 'rest_api_init',          'wp_oembed_register_route');
 remove_filter( 'rest_pre_serve_request', '_oembed_rest_pre_serve_request', 10, 4 );
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
-
+/**/
 // Удаляем meta generator
 remove_action( 'wp_head', 'wp_generator' );
 add_filter( 'the_generator', '__return_empty_string' );
@@ -261,3 +262,112 @@ add_action( 'wp_enqueue_scripts', 'custom_script' );
 function custom_script(){
     wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/custom.js');
 }
+
+function wpcf7_do_something ($WPCF7_ContactForm) {
+  global $wpdb;
+
+  $country = $_COOKIE['country'];
+  $arrReqRecipient = array(
+      // 
+      'barbados'            => 'quote.bb@massyunitedinsurance.com',
+      'trinidadnandtobago'  => 'quote.tt@massyunitedinsurance.com',
+      'antiguaandbarbuda'   => 'quote@massyunitedinsurance.com',
+      'dominica'            => 'quote@massyunitedinsurance.com',
+      'grenada'             => 'quote@massyunitedinsurance.com',
+      'montserrat'          => 'quote@massyunitedinsurance.com',
+      'stkittsandnevis'     => 'underwriting.skn@massyunitedinsurance.com',
+      'stlucia'             => 'quote@massyunitedinsurance.com',
+      'stvincentandthegrenadines'   => 'quote@massyunitedinsurance.com',
+      //
+      'britishvirginislands'        => 'quote@massyunitedinsurance.com',
+      'bahamas'         => 'quote@massyunitedinsurance.com',
+      'caymanislands'   => 'underwriting.ky@massyunitedinsurance.com',
+      'jamaica'         => 'underwriting.jm@massyunitedinsurance.com',
+      'turksandcaicos'  => 'quote@massyunitedinsurance.com',
+      //
+      'guyana'          => 'quote.gy@massyunitedinsurance.com',
+      'angulia'         => 'quote@massyunitedinsurance.com',
+      'belize'          => 'quote@massyunitedinsurance.com'
+  );
+  $arrClaimRecipient = array(
+      //
+      'barbados'            => 'claims.bb@massyunitedinsurance.com',
+      'trinidadnandtobago'  => 'claims.tt@massyunitedinsurance.com',
+      'antiguaandbarbuda'   => 'claims.all@massyunitedinsurance.com',
+      'dominica'            => 'claims.all@massyunitedinsurance.com',
+      'grenada'             => 'claims.all@massyunitedinsurance.com',
+      'montserrat'          => 'claims.all@massyunitedinsurance.com',
+      'stkittsandnevis'     => 'claims.skn@massyunitedinsurance.com',
+      'stlucia'             => 'claims.all@massyunitedinsurance.com',
+      'stvincentandthegrenadines'   => 'claims.all@massyunitedinsurance.com',
+      //
+      'britishvirginislands'        => 'claims.all@massyunitedinsurance.com',
+      'bahamas'         => 'claims.all@massyunitedinsurance.com',
+      'caymanislands'   => 'claims.ky@massyunitedinsurance.com',
+      'jamaica'         => 'claims.jm@massyunitedinsurance.com',
+      'turksandcaicos'  => 'claims.all@massyunitedinsurance.com',
+      //
+      'guyana'          => 'claims.gy@massyunitedinsurance.com',
+      'angulia'         => 'claims.all@massyunitedinsurance.com',
+      'belize'          => 'claims.all@massyunitedinsurance.com'
+  );
+
+  $claim_recipient = $arrClaimRecipient[$country];
+  $quote_recipient = $arrReqRecipient[$country];
+
+  if( $country == 'trinidadnandtobago')
+    $career_recipient = 'vacancy.tt@massyunitedinsurance.com';
+  else
+    $career_recipient = 'hr@massyunitedinsurance.com';
+  
+  $submission = WPCF7_Submission::get_instance();
+
+  if ( $submission ) {
+    $posted_data = $submission->get_posted_data();
+    $uploaded_files = $submission->uploaded_files();
+  }
+
+  $wpcf7 = WPCF7_ContactForm::get_current();
+  $mail = $wpcf7->prop('mail');
+
+  // Quote forms
+  if(   $WPCF7_ContactForm->id == 958 ||
+        $WPCF7_ContactForm->id == 1113 ||
+        $WPCF7_ContactForm->id == 976 ||
+        $WPCF7_ContactForm->id == 981 ||
+        $WPCF7_ContactForm->id == 5770 ||
+        $WPCF7_ContactForm->id == 983
+  ){
+    $mail['recipient'] = $quote_recipient;
+  }
+
+  // Claim Forms
+  if(   $WPCF7_ContactForm->id == 343 ||
+        $WPCF7_ContactForm->id == 742 ||
+        $WPCF7_ContactForm->id == 333 ||
+        $WPCF7_ContactForm->id == 741 ||
+        $WPCF7_ContactForm->id == 740 ||
+        $WPCF7_ContactForm->id == 327 ||
+        $WPCF7_ContactForm->id == 753 ||
+        $WPCF7_ContactForm->id == 752 ||
+        $WPCF7_ContactForm->id == 751 ||
+        $WPCF7_ContactForm->id == 746 ||
+        $WPCF7_ContactForm->id == 750 ||
+        $WPCF7_ContactForm->id == 748 ||
+        $WPCF7_ContactForm->id == 747 
+   ){
+    $mail['recipient'] = $claim_recipient;
+  }
+
+  // Career Forms
+  if( $WPCF7_ContactForm->id == 421 ){
+    $mail['recipient'] = $career_recipient;
+  }
+
+  $wpcf7->set_properties(array("mail" => $mail));
+  return $wpcf7;
+}
+add_action("wpcf7_before_send_mail", "wpcf7_do_something");
+
+// disable spam check
+add_filter('wpcf7_spam', '__return_false');
