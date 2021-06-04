@@ -286,7 +286,7 @@ ul.ubermenu-row-id-5411 > li:not(:first-child){
 #header nav .ubermenu-submenu.ubermenu-submenu-id-5401, 
 #header nav .ubermenu-submenu.ubermenu-submenu-id-5432,
 #header nav .ubermenu-submenu.ubermenu-submenu-id-5424{
-	background-image: url("../img/menu-bg.png");
+/* 	background-image: url("../img/menu-bg.png"); */
     background-position: right center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -559,7 +559,8 @@ p.italic{
 .page.page-id-52 form input[type=number],
 .page.page-id-52 form input[type=date],
 .page.page-id-52 form select,
-.page.page-id-52 form textarea{
+.page.page-id-52 form textarea, 
+{
 	background: transparent linear-gradient(180deg, #EDEDED 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
 	border: 1px solid #E6E6E6 !important;
     border-radius: 8px;
@@ -928,4 +929,73 @@ p.italic{
 }
 .footer-social.social-color ul li a i.fa-youtube-play{
 	background-color: red;
+}
+#custom_html-2 .float{
+	width: 60px;
+	height: 60px;
+	right: 20px;
+	bottom: 3%;
+}
+#custom_html-2 .float .blueFloat252{
+	height: 100%;
+	border-radius: 50%;
+}
+#custom_html-2 .float .blueFloat252 i{
+	padding-top: 0 !important;
+	line-height: 60px;
+	font-size: 30px !important;
+}
+.feedback_container{
+	display: none;
+	position: fixed;
+	right: 20px;
+	bottom: 12%;
+	background: white;
+    z-index: 9999;
+    border-radius: 20px;
+    box-shadow: 0px 3px 10px rgb(0 0 0 / 29%);
+    width: 350px;
+}
+.feedback_container.active{
+	display: block;
+}
+.feedback_container .feedback_header{
+	background: #00AEE7;
+	padding: 20px 30px;
+	
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.feedback_container .feedback_header h2{
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-size: 25px;
+}
+.feedback_container .feedback_body{
+	padding: 20px 10px 0 25px;
+}
+.feedback_container .wpcf7-form-control.wpcf7-submit{
+	float: none;
+	padding: 0px 35px;
+	margin-top: 0px;
+}
+.feedback_container .wpcf7 .form-group{
+	line-height: 35px;
+	margin-bottom: 20px;
+}
+.feedback_container .wpcf7-form input.wpcf7-form-control, .feedback_container  select.wpcf7-form-control{
+	height: 45px;
+}
+.feedback_container .wpcf7-form-control.wpcf7-submit{
+	text-transform: capitalize;
+}
+#responsive-form{
+	max-height: 550px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+.feedback_container .wpcf7 .ajax-loader{
+	bottom: 29px;
 }
