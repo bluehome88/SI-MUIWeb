@@ -12,10 +12,10 @@ add_action( 'wp_enqueue_scripts', '_action_bizipress_child_enqueue_scripts',11);
 //register the new menu
 function register_my_menu() {
   //register_nav_menu('new-menu',__( 'New Menu' ));
-	register_nav_menus(
+    register_nav_menus(
     array(
       'middle-new-menu' => __( 'Middle New Menu' ),
-	  'bi-new-menu' => __( 'BI New Menu' ),
+      'bi-new-menu' => __( 'BI New Menu' ),
     )
   );
 }
@@ -65,7 +65,7 @@ function dynamic_field_values ( $tag, $unused ) {
         return $tag;
 
     $args = array (
-      	'author'        =>  $user_id,
+        'author'        =>  $user_id,
         'numberposts'   => -1,
         'post_type'     => 'my_vault',
         'orderby'       => 'title',
@@ -79,16 +79,16 @@ function dynamic_field_values ( $tag, $unused ) {
 
     foreach ( $custom_posts as $custom_post ) {
 
-	$tally= "Item Type: " . get_field( "item_type", $custom_post->ID ) . 
-	        " \r\n Item Description: " . get_field( "item_description", $custom_post->ID ) .
-			" \r\n Item Price ($) : " . get_field( "item_price_$", $custom_post->ID ) .
-			" \r\n Date Of Purchase : " . get_field( "date_of_purchase", $custom_post->ID ) .
-			" \r\n Warrent Expiration : " . get_field( "warrent_expiration", $custom_post->ID ) .
-			" \r\n Insurance Renewal: " . get_field( "insurance_renewal", $custom_post->ID ) .
-			" \r\n Files: " . wp_get_attachment_url(get_field( "add_files", $custom_post->ID )) ;
-	
-	
-	
+    $tally= "Item Type: " . get_field( "item_type", $custom_post->ID ) . 
+            " \r\n Item Description: " . get_field( "item_description", $custom_post->ID ) .
+            " \r\n Item Price ($) : " . get_field( "item_price_$", $custom_post->ID ) .
+            " \r\n Date Of Purchase : " . get_field( "date_of_purchase", $custom_post->ID ) .
+            " \r\n Warrent Expiration : " . get_field( "warrent_expiration", $custom_post->ID ) .
+            " \r\n Insurance Renewal: " . get_field( "insurance_renewal", $custom_post->ID ) .
+            " \r\n Files: " . wp_get_attachment_url(get_field( "add_files", $custom_post->ID )) ;
+    
+    
+    
         $tag['raw_values'][] = $custom_post->post_title;
         $tag['values'][] = $tally;
         $tag['labels'][] = $custom_post->post_title;
@@ -114,7 +114,7 @@ function dynamic_field_values2 ( $tag, $unused ) {
         'post_type'     => 'career',
         'orderby'       => 'title',
         'order'         => 'ASC',
-		'exclude'       => '549',
+        'exclude'       => '549',
 
     );
 
@@ -144,7 +144,7 @@ add_filter( 'wpcf7_form_tag', 'dynamic_field_values2', 10, 2);
  * Enables the Excerpt meta box in post type edit screen.
  */
 function wpcodex_add_excerpt_support_for_pages() {
-	add_post_type_support( 'news', 'excerpt' );
+    add_post_type_support( 'news', 'excerpt' );
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );/**
 
@@ -153,7 +153,7 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );/**
  * Enables the Excerpt meta box in post type edit screen.
  */
 function wpcodex_add_excerpt_support_for_pages3() {
-	add_post_type_support( 'promotions', 'excerpt' );
+    add_post_type_support( 'promotions', 'excerpt' );
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages3' );/**
 
@@ -163,7 +163,7 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages3' );/**
  * Enables the Excerpt meta box in post type edit screen.
  */
 function wpcodex_add_excerpt_support_for_pages2() {
-	add_post_type_support( 'staff', 'excerpt' );
+    add_post_type_support( 'staff', 'excerpt' );
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages2' );
 
@@ -174,14 +174,14 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages2' );
 
 function arphabet_widgets_init() {
 
-	register_sidebar( array(
-		'name'          => 'contactUsForProducts',
-		'id'            => 'contactUsForProducts',
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="rounded">',
-		'after_title'   => '</h2>',
-	) );
+    register_sidebar( array(
+        'name'          => 'contactUsForProducts',
+        'id'            => 'contactUsForProducts',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="rounded">',
+        'after_title'   => '</h2>',
+    ) );
 
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
@@ -267,10 +267,33 @@ function wpcf7_do_something ($WPCF7_ContactForm) {
   global $wpdb;
 
   $country = $_COOKIE['country'];
+  $arrCountryLang = array(
+      // 
+      'barbados'            => 'Barbados',
+      'trinidadandtobago'   => 'Trinidad and Tobago',
+      'antiguaandbarbuda'   => 'Antigua & Barbuda',
+      'dominica'            => 'Dominica',
+      'grenada'             => 'Grenada',
+      'montserrat'          => 'Montserrat',
+      'stkittsandnevis'     => 'St. Kitts & Nevis',
+      'stlucia'             => 'St. Lucia',
+      'stvincentandthegrenadines'   => 'St. Vincent & the Grenadines',
+      //
+      'britishvirginislands'        => 'British Virgin Islands',
+      'bahamas'         => 'Bahamas',
+      'caymanislands'   => 'Cayman Islands',
+      'jamaica'         => 'Jamaica',
+      'turksandcaicos'  => 'Turks & Caicos',
+      //
+      'guyana'          => 'Guyana',
+      'angulia'         => 'Angulia',
+      'belize'          => 'Belize'
+  );
+
   $arrReqRecipient = array(
       // 
       'barbados'            => 'quote.bb@massyunitedinsurance.com',
-      'trinidadnandtobago'  => 'quote.tt@massyunitedinsurance.com',
+      'trinidadandtobago'  => 'quote.tt@massyunitedinsurance.com',
       'antiguaandbarbuda'   => 'quote@massyunitedinsurance.com',
       'dominica'            => 'quote@massyunitedinsurance.com',
       'grenada'             => 'quote@massyunitedinsurance.com',
@@ -292,7 +315,7 @@ function wpcf7_do_something ($WPCF7_ContactForm) {
   $arrClaimRecipient = array(
       //
       'barbados'            => 'claims.bb@massyunitedinsurance.com',
-      'trinidadnandtobago'  => 'claims.tt@massyunitedinsurance.com',
+      'trinidadandtobago'  => 'claims.tt@massyunitedinsurance.com',
       'antiguaandbarbuda'   => 'claims.all@massyunitedinsurance.com',
       'dominica'            => 'claims.all@massyunitedinsurance.com',
       'grenada'             => 'claims.all@massyunitedinsurance.com',
@@ -315,11 +338,11 @@ function wpcf7_do_something ($WPCF7_ContactForm) {
   $claim_recipient = $arrClaimRecipient[$country];
   $quote_recipient = $arrReqRecipient[$country];
 
-  if( $country == 'trinidadnandtobago')
+  if( $country == 'trinidadandtobago')
     $career_recipient = 'vacancy.tt@massyunitedinsurance.com';
   else
     $career_recipient = 'hr@massyunitedinsurance.com';
-  
+
   $submission = WPCF7_Submission::get_instance();
 
   if ( $submission ) {
@@ -342,7 +365,7 @@ function wpcf7_do_something ($WPCF7_ContactForm) {
   }
 
   // Claim Forms
-  if(   $WPCF7_ContactForm->id == 343 ||
+  if(   $WPCF7_ContactForm->id == 343 /*||
         $WPCF7_ContactForm->id == 742 ||
         $WPCF7_ContactForm->id == 333 ||
         $WPCF7_ContactForm->id == 741 ||
@@ -354,7 +377,7 @@ function wpcf7_do_something ($WPCF7_ContactForm) {
         $WPCF7_ContactForm->id == 746 ||
         $WPCF7_ContactForm->id == 750 ||
         $WPCF7_ContactForm->id == 748 ||
-        $WPCF7_ContactForm->id == 747 
+        $WPCF7_ContactForm->id == 747 */
    ){
     $mail['recipient'] = $claim_recipient;
   }
@@ -363,11 +386,40 @@ function wpcf7_do_something ($WPCF7_ContactForm) {
   if( $WPCF7_ContactForm->id == 421 ){
     $mail['recipient'] = $career_recipient;
   }
+  
+  if( isset($posted_data['pname'])){
+      if( $posted_data['pname'] == '' )
+        $mail['body'] = str_replace( "Product Name: [pname]", "", $mail['body'] );
+  }
+  // Pass country info
+  $mail['body'] = str_replace( "[country]", $arrCountryLang[$country], $mail['body'] );
 
+print_r( $mail );
   $wpcf7->set_properties(array("mail" => $mail));
   return $wpcf7;
 }
 add_action("wpcf7_before_send_mail", "wpcf7_do_something");
 
-// disable spam check
+// deactive spam check : TODO remove for activating google captcha // By Yakov
 add_filter('wpcf7_spam', '__return_false');
+
+// Career by selected country
+function pre_career_posts( $query ) {
+/*
+    if( is_admin() )
+        return $query;
+*/
+
+    // only modify queries for 'event' post type
+/*
+    $country = $_COOKIE['country']; 
+    if( isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'career' ) {
+        $query->set('meta_key', 'access_country');   
+        $query->set('meta_value', array($country, '') );
+    }
+*/
+
+    // return
+    return $query;
+}
+add_action('pre_get_posts', 'pre_career_posts');
