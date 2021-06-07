@@ -1,41 +1,10 @@
 jQuery( document ).ready( function ( $ ) {
-  $('a[href*="#"]')
-    // Remove links that don't actually link to anything
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function(event) {
+  // claim button
+  $(".vc_tta-tab a[href='#1622128225297-ce9475cb-8388']").click(function(e){ 
+    e.stopPropagation();
+    e.preventDefault(); 
 
-      if( $(this).parent().hasClass("vc_tta-tab") )
-          return;
-      // On-page links
-      if (
-        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-        && 
-        location.hostname == this.hostname
-      ) {
-        // Figure out element to scroll to
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        // Does a scroll target exist?
-        if (target.length) {
-          // Only prevent default if animation is actually gonna happen
-          event.preventDefault();
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 1000, function() {
-            // Callback after animation
-            // Must change focus!
-            var $target = $(target);
-            $target.focus();
-            if ($target.is(":focus")) { // Checking if the target was focused
-              return false;
-            } else {
-              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-              $target.focus(); // Set focus again
-            };
-          });
-        }
-      }
-    });
-
+    window.location.href = "https://www.massyunitedcargo.com/claims/claim-form";
+    return; 
+  })
 });
