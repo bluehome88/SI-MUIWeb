@@ -52,7 +52,7 @@
 	color: #fc6a2a !important;
 }
 .modal.in .modal-dialog img{
-	width: 50%;
+	/* width: 50%; */
 	margin: 0;
 }
 .modal.in .modal-dialog p{
