@@ -36,6 +36,7 @@ span.caret.caret252::after{
     margin-left: 10px;
     margin-right: 10px;
     vertical-align: middle;
+    display: inline-block;
 }
 #top-bar #country_list_btn > span{
 	vertical-align: middle;
