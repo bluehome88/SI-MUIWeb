@@ -12,19 +12,25 @@ get_header();
 ?>
 <script>
 	const redirectCountry = getCookie('country'); 
-	switch (redirectCountry) {
-		case "anguilla":
-			if (window.location.pathname !== '/')
-				location = window.location.protocol + "//" + window.location.hostname
-			break
-		default:
-			if (redirectCountry && !(window.location.pathname == '/' + redirectCountry || window.location.pathname == '/' + redirectCountry + '/'))
-				location = window.location.protocol + "//" + window.location.hostname + '/' + redirectCountry
-			break
-	}
+	// switch (redirectCountry) {
+	// 	case "anguilla":
+	// 		if (window.location.pathname !== '/')
+	// 			location = window.location.protocol + "//" + window.location.hostname
+	// 		break
+	// 	default:
+	// 		if (redirectCountry && !(window.location.pathname == '/' + redirectCountry || window.location.pathname == '/' + redirectCountry + '/'))
+	// 			location = window.location.protocol + "//" + window.location.hostname + '/' + redirectCountry
+	// 		break
+	// }
 </script>
 <?php
 get_template_part('template-parts/header/content', 'page-header');
+
+$country = $_COOKIE['country'];
+$product_data = get_field( "product_".$country );
+if( $product_data == "" )
+	$product_data = get_field( "product_default" );
+
 ?>
 <div class=" blog-wrap" role="main">
 	<div class="container">
@@ -44,6 +50,7 @@ get_template_part('template-parts/header/content', 'page-header');
 						<div class="entry-content">
 
 							<?php the_content();   ?>
+							<?php echo $product_data; ?>
 							<?php wp_link_pages(); ?>
 						</div> <!-- end entry-content -->
 
