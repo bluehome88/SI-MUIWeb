@@ -42,62 +42,62 @@
 			$userInfo = geoip_detect2_get_info_from_ip($_SERVER['HTTP_X_CLIENT_IP'], [ 0 => 'en' ], [ 'skipCache' => TRUE ]) ; 
 			if ($userInfo->country->isoCode == 'TT') {
 				$ui = "trinidadandtobago";
-				echo 'setCookie("country", "trinidadandtobago", 1); window.location = "/trinidadandtobago/"';
+				echo 'setCookie("country", "trinidadandtobago", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'AI') {
 				$ui = "anguilla";
 				echo 'setCookie("country", "anguilla", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'AG') {
 				$ui = "antiguaandbarbuda";
-				echo 'setCookie("country", "antiguaandbarbuda", 1); window.location = "/antiguaandbarbuda/"';
+				echo 'setCookie("country", "antiguaandbarbuda", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'ABW') {
 				echo 'window.location = "https://www.massyunited.com/"';
 			} else if ($userInfo->country->isoCode == 'BS') {
 				$ui = "bahamas";
-				echo 'setCookie("country", "bahamas", 1); window.location = "/bahamas/"';
+				echo 'setCookie("country", "bahamas", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'BB') {
 				$ui = "barbados";
-				echo 'setCookie("country", "barbados", 1); window.location = "/barbados/"';
+				echo 'setCookie("country", "barbados", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'BZ') {
 				$ui = "belize";
-				echo 'setCookie("country", "belize", 1); window.location = "/belize/"';
+				echo 'setCookie("country", "belize", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'VG') {
 				$ui = "britishvirginislands";
-				echo 'setCookie("country", "britishvirginislands", 1); window.location = "/britishvirginislands/"';
+				echo 'setCookie("country", "britishvirginislands", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'KY') {
 				$ui = "caymanislands";
-				echo 'setCookie("country", "caymanislands", 1); window.location = "/caymanislands/"';
+				echo 'setCookie("country", "caymanislands", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'CW') {
 				echo 'window.location = "https://www.massyunited.com/"';
 			} else if ($userInfo->country->isoCode == 'DM') {
 				$ui = "dominica";
-				echo 'setCookie("country", "dominica", 1); window.location = "/dominica/"';
+				echo 'setCookie("country", "dominica", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'GD') {
 				$ui = "grenada";
-				echo 'setCookie("country", "grenada", 1); window.location = "/grenada/"';
+				echo 'setCookie("country", "grenada", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'GU') {
 				$ui = "guyana";
-				echo 'setCookie("country", "guyana", 1); window.location = "/guyana/"';
+				echo 'setCookie("country", "guyana", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'JM') {
 				$ui = "jamaica";
-				echo 'setCookie("country", "jamaica", 1); window.location = "/jamaica/"';
+				echo 'setCookie("country", "jamaica", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'MS') {
 				$ui = "montserrat";
-				echo 'setCookie("country", "montserrat", 1); window.location = "/montserrat/"';
+				echo 'setCookie("country", "montserrat", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'KN') {
 				$ui = "stkittsandnevis";
-				echo 'setCookie("country", "stkittsandnevis", 1); window.location = "/stkittsandnevis/"';
+				echo 'setCookie("country", "stkittsandnevis", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'LC') {
 				$ui = "stlucia";
-				echo 'setCookie("country", "stlucia", 1); window.location = "/stlucia/"';
+				echo 'setCookie("country", "stlucia", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'VC') {
 				$ui = "stvincentandthegrenadines";
-				echo 'setCookie("country", "stvincentandthegrenadines", 1); window.location = "/stvincentandthegrenadines/"';
+				echo 'setCookie("country", "stvincentandthegrenadines", 1); window.location = "/"';
 			} else if ($userInfo->country->isoCode == 'TC') {
 				$ui = "turksandcaicos";
-				echo 'setCookie("country", "turksandcaicos", 1); window.location = "/turksandcaicos/"';
+				echo 'setCookie("country", "turksandcaicos", 1); window.location = "/"';
 			} else {
 				$ui = "barbados"; 
-				echo 'setCookie("country", "barbados", 1); window.location = "/barbados/"';
+				echo 'setCookie("country", "barbados", 1); window.location = "/"';
 			}
 			?>
 		}
@@ -117,7 +117,7 @@
 		?> 
 
 		// Redirect to home pagev when access wrong 
-		if (access_country && access_country !== country) location = '/' + country || '';
+		// if (access_country && access_country !== country) location = '/' + country || '';
 	</script>
 
 	<script>
