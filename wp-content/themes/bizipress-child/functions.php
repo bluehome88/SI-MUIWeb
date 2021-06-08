@@ -187,7 +187,7 @@ function arphabet_widgets_init() {
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
 
-
+/*
 // Отключаем emoji
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' , 7 );
@@ -207,14 +207,14 @@ remove_action( 'auth_cookie_bad_username',   'rest_cookie_collect_status' );
 remove_action( 'auth_cookie_bad_hash',       'rest_cookie_collect_status' );
 remove_action( 'auth_cookie_valid',          'rest_cookie_collect_status' );
 remove_filter( 'rest_authentication_errors', 'rest_cookie_check_errors', 100 );
-/*
+
 remove_action( 'init',          'rest_api_init' );
 remove_action( 'rest_api_init', 'rest_api_default_filters', 10, 1 );
 remove_action( 'parse_request', 'rest_api_loaded' );
 remove_action( 'rest_api_init',          'wp_oembed_register_route');
 remove_filter( 'rest_pre_serve_request', '_oembed_rest_pre_serve_request', 10, 4 );
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
-/**/
+/**//*
 // Удаляем meta generator
 remove_action( 'wp_head', 'wp_generator' );
 add_filter( 'the_generator', '__return_empty_string' );
@@ -238,7 +238,7 @@ remove_action( 'wp_head', 'feed_links', 2 );
 
 // Удаляем dns prefetch
 remove_action( 'wp_head', 'wp_resource_hints', 2 );
-
+*/
 
 // check for category parent
 function category_has_parent($catid){
@@ -263,7 +263,7 @@ function custom_script(){
     wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/custom.js');
 }
 
-function wpcf7_do_something ($WPCF7_ContactForm) {
+function wpcf7_handle_recipient ($WPCF7_ContactForm) {
   global $wpdb;
 
   $country = $_COOKIE['country'];
@@ -394,32 +394,48 @@ function wpcf7_do_something ($WPCF7_ContactForm) {
   // Pass country info
   $mail['body'] = str_replace( "[country]", $arrCountryLang[$country], $mail['body'] );
 
-print_r( $mail );
+
   $wpcf7->set_properties(array("mail" => $mail));
   return $wpcf7;
 }
-add_action("wpcf7_before_send_mail", "wpcf7_do_something");
+add_action("wpcf7_before_send_mail", "wpcf7_handle_recipient");
 
 // deactive spam check : TODO remove for activating google captcha // By Yakov
 add_filter('wpcf7_spam', '__return_false');
 
 // Career by selected country
 function pre_career_posts( $query ) {
-/*
-    if( is_admin() )
-        return $query;
-*/
 
-    // only modify queries for 'event' post type
-/*
-    $country = $_COOKIE['country']; 
-    if( isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'career' ) {
-        $query->set('meta_key', 'access_country');   
-        $query->set('meta_value', array($country, '') );
+    if( is_admin() ) return;
+    if( $query->is_main_query() ) return;
+    // if( ! is_post_type_archive( 'actions' ) ) return;
+
+    // only modify queries for 'career' post type
+    if( isset($query->query_vars['post_type']) 
+    	&& (
+    		$query->query_vars['post_type'] == 'career' || 
+	    	$query->query_vars['post_type'] == 'news' || 
+	    	$query->query_vars['post_type'] == 'photo_gallery' || 
+	    	$query->query_vars['post_type'] == 'promotions'
+    	)
+    	
+    ) {
+	    $country = $_COOKIE['country']; 
+		$meta_query = array(
+			'relation' => 'OR',
+	        array(
+	            'key'     => 'access_country',
+	            'value'   => null,
+	            'compare' => '==',
+	        ),
+	        array(
+	            'key'     => 'access_country',
+	            'value'   => $country,
+	            'compare' => 'LIKE',
+	        )
+        );
+
+        $query->set( 'meta_query', $meta_query );
     }
-*/
-
-    // return
-    return $query;
 }
 add_action('pre_get_posts', 'pre_career_posts');
