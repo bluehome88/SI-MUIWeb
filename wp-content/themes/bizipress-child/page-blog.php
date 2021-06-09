@@ -9,6 +9,8 @@
 <?php get_header(); 
 
 get_template_part('template-parts/header/content', 'page-banner');
+
+$country = $_COOKIE['country']; 
 ?>
 <div class="main-content blog-wrap"  role="main">
     <div class="container">
@@ -49,6 +51,10 @@ get_template_part('template-parts/header/content', 'page-banner');
 							//$args = array( 'post_type' => 'news', 'posts_per_page' => -1 , 'orderby' => 'date' ,'order' => 'DESC' );
 							$loop = new WP_Query( $args );
 							while ( $loop->have_posts() ) : $loop->the_post();
+								$access_country = get_field("access_country");
+								if( strpos(implode(",", $access_country), $country) === false && !empty( $access_country )){
+									continue;
+								}
 							?>
 							<div class="row newsblogPadd252">
 							  <div class="col-md-4 col-sm-12">
