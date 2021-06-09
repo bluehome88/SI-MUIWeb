@@ -117,7 +117,7 @@
 		?> 
 
 		// Redirect to home pagev when access wrong 
-		// if (access_country && access_country !== country) location = '/' + country || '';
+		if (access_country != null && access_country.indexOf(country) === -1 ) location = '/';
 	</script>
 
 	<script>
