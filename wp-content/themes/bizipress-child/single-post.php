@@ -14,7 +14,11 @@ get_header();
 get_template_part( 'template-parts/header/content', 'blog-header' )
 ?>
 
-
+<style>
+#banner-area {
+    background: #0f2765 url(<?php the_post_thumbnail_url( 'full' ); ?>) !important;
+}
+</style>
 <div id="main-container" class="main-container blog" role="main">
     <div class="sections">
         <div class="container">
