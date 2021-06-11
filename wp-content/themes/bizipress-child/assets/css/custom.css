@@ -616,7 +616,7 @@ p.italic{
 	display:flex;
 }
 .page.page-id-52 form span.wpcf7-form-control.wpcf7-radio span.wpcf7-list-item{
-	width:50%;
+	width: 10%;
 }
 .page.page-id-52 form span.wpcf7-form-control.wpcf7-radio span.wpcf7-list-item .wpcf7-list-item-label{
 	font-size: 18px;
@@ -942,6 +942,7 @@ p.italic{
 #custom_html-2 .float .blueFloat252{
 	height: 100%;
 	border-radius: 50%;
+	margin-top: 0;
 }
 #custom_html-2 .float .blueFloat252 i{
 	padding-top: 0 !important;
@@ -1004,4 +1005,30 @@ p.italic{
 }
 .vc_custom_1556032569526 .wpb_content_element{
 	margin-bottom: 0;
+}
+.entry-meta span.category a{
+	/* display: none; */
+}
+.post-single .entry-content p{
+	line-height: 30px !important;
+    font-size: 18px;
+}
+@media (max-width: 767px){
+	#home_banner{
+		display: block;
+		padding: 15px 0;
+	}
+}
+@media only screen and (max-width: 991px){
+	#custom_html-2 .float{
+		margin-right: 0;
+		text-align: center !important;
+	}
+	#custom_html-2 .feedback_container{
+		right: auto;
+	}
+	#custom_html-2 .feedback_container .wpcf7 .form-group{
+		line-height: 25px;
+    	margin-bottom: 10px;
+	}
 }
