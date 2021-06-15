@@ -12,6 +12,7 @@
 	color: #004C7C;
 	font-size: 16px;
 	padding-top: 11px;
+	line-height: 1;
 }
 span.caret.caret252{
 	border-top-color: #004C7C !important;
@@ -352,7 +353,7 @@ ul.ubermenu-row-id-5411 > li:not(:first-child){
 	font-family: FontAwesome;
 	content: "\f054";
 	position: absolute;
-	bottom: 9px;
+	/*bottom: 9px;*/
 	font-size: 13px;
 	margin-left: 5px;
 }
@@ -528,6 +529,7 @@ p.italic{
     text-decoration-color: #FF7B00;
     text-underline-offset: 9px;
     margin-top: 0;
+    line-height: 55px !important;
 }
 #banner-area .banner_card p{
 	font-size: 16px;
@@ -535,21 +537,6 @@ p.italic{
     color: #004C7C;
     line-height: 24px !important;
     margin-top: 20px;
-}
-/* contents page responsive */
-@media (max-width: 991px){
-	.tab_wrapper > .row{
-		display: inherit !important;
-	}
-	.tab_wrapper > .row .form_link_widget{
-		position: inherit !important;
-		width: 100%;
-		margin-left: 0;
-		margin-bottom: 10px;
-	}
-	.tab_wrapper h2.tab_label{
-		text-align: center;
-	}
 }
 
 /* Quote Page */
@@ -614,17 +601,19 @@ p.italic{
 }
 .page.page-id-52 form span.wpcf7-form-control.wpcf7-radio{
 	display:flex;
+	padding-left: 0;
 }
 .page.page-id-52 form span.wpcf7-form-control.wpcf7-radio span.wpcf7-list-item{
-	width: 10%;
+	 /* width: 10%; */
 }
 .page.page-id-52 form span.wpcf7-form-control.wpcf7-radio span.wpcf7-list-item .wpcf7-list-item-label{
 	font-size: 18px;
 	color: #8D8D8D;
 }
 .page.page-id-52 form span.wpcf7-form-control.wpcf7-radio span.wpcf7-list-item.first{
-	text-align: right;
+	text-align: left;
 	margin-right: 40px;
+	margin-left: 0;
 }
 .page.page-id-52 form span.wpcf7-form-control.wpcf7-radio span.wpcf7-list-item.last{
 	margin-left: 40px;
@@ -995,7 +984,7 @@ p.italic{
 	text-transform: capitalize;
 }
 #responsive-form{
-	max-height: 550px;
+	max-height: 50vh;
     overflow: hidden;
     overflow-y: auto;
     padding-right: 15px;
@@ -1013,10 +1002,33 @@ p.italic{
 	line-height: 30px !important;
     font-size: 18px;
 }
+.tab_wrapper h2.tab_label.mobile{
+	display: none;
+}
 @media (max-width: 767px){
 	#home_banner{
 		display: block;
 		padding: 15px 0;
+	}
+	div#banner-area{
+		min-height: 492px !important;
+	}
+	#banner-area .banner_card{
+		max-width: 60%;
+	}
+	#banner-area .banner_card label{
+		font: normal normal normal 15px/28px Open Sans;
+    	margin-top: 20px;
+	}
+	#banner-area .banner_card h3{
+		font-size: 28px !important;
+		line-height: 40px !important;
+	}
+	#banner-area .banner_card p{
+		font-size: 14px;
+	}
+	.top-info, .top-social {
+		text-align: center !important;
 	}
 }
 @media only screen and (max-width: 991px){
@@ -1030,5 +1042,36 @@ p.italic{
 	#custom_html-2 .feedback_container .wpcf7 .form-group{
 		line-height: 25px;
     	margin-bottom: 10px;
+	}
+
+	.tab_wrapper > .row{
+		display: flex;
+		flex-direction: column;
+	}
+	.tab_wrapper > .row tab_label.mobile{
+		order: 1;
+	}
+	.tab_wrapper > .row > .col-md-4{
+		order: 3;
+	}
+	.tab_wrapper > .row > .col-md-8{
+		order: 2;
+	}
+	.tab_wrapper > .row .form_link_widget{
+		position: inherit !important;
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 10px;
+		margin-top: 25px;
+	}
+	.tab_wrapper h2.tab_label{
+		text-align: center;
+	}
+	.tab_wrapper h2.tab_label{
+		display: none;
+	}
+	.tab_wrapper h2.tab_label.mobile{
+		display: block;
+		margin-bottom: 25px;
 	}
 }

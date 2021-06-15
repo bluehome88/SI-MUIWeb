@@ -31,6 +31,8 @@ if ($top_menu == 'menu-1') {
 
 	//	$top_class = 'top-bar solid-bg';
 }
+$country = $_COOKIE['country'];
+echo "<style>p.contact{display:none} p.contact.$country{display:block;}</style>";
 ?>
 
 <div id="top-bar" class="<?php echo esc_attr($top_class); ?>">
@@ -38,7 +40,7 @@ if ($top_menu == 'menu-1') {
 		<div class="row">
 			<!--/ Top info end -->
 			<div class="col-md-12 col-sm-12 col-xs-12 topBarAlignment252">
-				<ul class="top-social col-md-9 col-sm-10 col-xs-12">
+				<ul class="top-social col-md-6 col-sm-7 col-xs-12">
 					<li>
 						<?php
 						if (defined('FW')) :
@@ -50,6 +52,25 @@ if ($top_menu == 'menu-1') {
 						endif;
 						?></li>
 				</ul>
+				<span class="col-md-3 col-sm-3 col-xs-12 callUs">
+					<p class="contact anguilla">Call Us: <a href="tel:1 264 497 3525">+1 264 497 3525</a></p>
+					<p class="contact antiguaandbarbuda">Call Us: <a href="tel:1 268 480 3050">+1 268 480 3050</a></p>
+					<p class="contact bahamas_no">Call Us: <a href="tel:0000000000000000">+0000000000000000</a></p>
+					<p class="contact barbados">Call Us: <a href="tel:1 246 430 1900">+1 246 430 1900</a></p>
+					<p class="contact belize">Call Us: <a href="tel:1 501 227 7310">+1 501 227 7310</a></p>
+					<p class="contact britishvirginislands">Call Us: <a href="tel:1 284 393 8920">+1 284 393 8920</a></p>
+					<p class="contact caymanislands">Call Us: <a href="tel:1 345 743 1900">1 345 743 1900</a></p>
+					<p class="contact dominica_no">Call Us: <a href="tel:0000000000000000">0000000000000000</a></p>
+					<p class="contact grenada">Call Us: <a href="tel:1 473 440 1193">+1 473 440 1193</a></p>
+					<p class="contact guyana">Call Us: <a href="tel:592 226 1926">+592 226 1926</a></p>
+					<p class="contact jamaica">Call Us: <a href="tel:1 876 633 7085">+1 876 633 7085</a></p>
+					<p class="contact montserrat">Call Us: <a href="tel:1 664 491 2055">+1 664 491 2055</a></p>
+					<p class="contact stkittsandnevis">Call Us: <a href="tel:1 869 466 5006">+1 869 466 5006</a></p>
+					<p class="contact stlucia">Call Us: <a href="tel:1 758 456 6560">+1 758 456 6560</a></p>
+					<p class="contact stvincentandthegrenadines_no">Call Us: <a href="tel:000000000000">+000000000000</a></p>
+					<p class="contact trinidadandtobago">Call Us: <a href="tel:1 868 627 7530">+1 868 627 7530</a></p>
+					<p class="contact turksandcaicos_no">Call Us: <a href="tel:000000000000">+000000000000</a></p>
+				</span>
 				<div class="col-md-3 col-sm-2 col-xs-12 padno252 ">
 					<div class="countrysel dropdown">
 						<button type="button" id="country_list_btn" class="conBTN btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
