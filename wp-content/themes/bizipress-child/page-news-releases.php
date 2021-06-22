@@ -83,12 +83,6 @@ get_template_part( 'template-parts/header/content', 'page-banner' );
 								<div class="entry-meta"> 
 								<span class="published"><i class="fa fa-clock-o blue252 " aria-hidden="true"></i> <span class="padblog"> <?php echo get_the_date(); ?></span></span>
 								<span class="author vcard"><i class="fa fa-user blue252" aria-hidden="true"></i> <?php the_author_posts_link(); ?></span>
-								<span class="category"><i class="fa fa-newspaper-o blue252" aria-hidden="true"></i>
-								<?php  $category = get_the_terms( $post->ID, 'news_categories' );     
-								foreach ( $category as $cat){
-								   echo ('<a href="../">'.$cat->name.'</a>');
-								} ?>
-								</span>	
 								</div>
 							</div>
 							
@@ -96,15 +90,6 @@ get_template_part( 'template-parts/header/content', 'page-banner' );
 							  
 							<?php endwhile; ?>
 							
-							
-							
-							
-							
-							
-							
-							 
-							 
-							 						 
 						</div> <!-- end entry-content -->
 
 					
@@ -116,28 +101,15 @@ get_template_part( 'template-parts/header/content', 'page-banner' );
 			
 			<div class="col-md-3 col-sm-3 padblog252 col-md-offset-1">	
 				
-				<?php
-						   $args = array(
-									   'taxonomy' => 'news_categories',
-									   'orderby' => 'name',
-									   'order'   => 'ASC'
-								   );
-
-						   $cats = get_categories($args);
-						?>
-						<h2 class="cat252">Categories</h2>
-						<ul class="catlist252">
-						<?php
-						   foreach($cats as $cat) {
-						?>
-							 <li class="catItem252"> <a href="<?php echo get_category_link( $cat->term_id ) ?>">
-								   <?php echo $cat->name; ?>
-							  </a>
-							  </li>
-						<?php
-						   }
-						?>
-						</ul>
+				<h2 class="cat252">Recent Posts</h2>
+					<ul class="catlist252">
+					<?php
+						$recent_posts = wp_get_recent_posts(array('post_type'=>'news'));
+						foreach( $recent_posts as $recent ){
+							echo '<li class="catItem252"><a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> </li> ';
+						}
+					?>
+					</ul>
 			</div>
 
 			
