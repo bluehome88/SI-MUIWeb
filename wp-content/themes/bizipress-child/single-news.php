@@ -45,7 +45,7 @@ get_template_part( 'template-parts/header/content', 'blog-header' )
 				
 				<div class="col-md-3 col-sm-3 padblog252 col-md-offset-1">	
 				
-				<h2 class="cat252">Recent Posts</h2>
+					<h2 class="cat252">Recent Posts</h2>
 					<ul class="catlist252">
 					<?php
 						$recent_posts = wp_get_recent_posts(array('post_type'=>'news'));

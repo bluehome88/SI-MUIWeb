@@ -24,12 +24,7 @@
 		<div class="entry-meta"> 
 			<span class="published"><i class="fa fa-clock-o blue252 " aria-hidden="true"></i> <span class="padblog"> <?php echo get_the_date(); ?></span></span>
 			<span class="author vcard"><i class="fa fa-user blue252" aria-hidden="true"></i> <?php the_author_posts_link(); ?></span>
-			<span class="category"><i class="fa fa-newspaper-o blue252" aria-hidden="true"></i>
-			<?php  $category = get_the_terms( $post->ID, 'news_categories' );     
-			foreach ( $category as $cat){
-			   echo ('<a href="../">'.$cat->name.'</a>');
-			} ?>
-			</span>	
+			
 		</div>
 		
 		

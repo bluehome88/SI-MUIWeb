@@ -228,6 +228,7 @@ add_filter( 'fw_github_api_url', '_fw_filter_github_api_url' );
 			if ( apply_filters( 'fw_use_sessions', true ) && ! session_id()  ) {
 				session_start();
 			}
+			session_write_close();
 		}
 
 		add_action( 'current_screen', '_action_fw_flash_message_backend_prepare', 9999 );
@@ -258,6 +259,7 @@ add_filter( 'fw_github_api_url', '_fw_filter_github_api_url' );
 			) {
 				session_start();
 			}
+			session_write_close();
 		}
 
 		add_action( 'send_headers', '_action_fw_flash_message_frontend_prepare', 9999 );

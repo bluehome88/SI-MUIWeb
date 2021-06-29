@@ -1017,6 +1017,9 @@ p.italic{
 	font-size: 22px !important;
 	padding-top: 20px !important;
 }
+p{
+	font-size: 18px !important;
+}
 @media only screen and (max-width: 991px){
 	#custom_html-2 .float{
 		margin-right: 0;
