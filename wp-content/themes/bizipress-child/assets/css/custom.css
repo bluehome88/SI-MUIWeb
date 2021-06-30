@@ -1020,6 +1020,16 @@ p.italic{
 p{
 	font-size: 18px !important;
 }
+.copyright.copyright-style-2 p{
+	font-size: 13px !important;
+	padding-top: 3%;
+}
+div.vc_gitem-post-data.vc_gitem-post-data-source-post_excerpt{
+	margin-bottom: 45px;
+}
+.latest-post .vc_btn3-container.vc_btn3-right{
+	margin-bottom: 10px;
+}
 @media only screen and (max-width: 991px){
 	#custom_html-2 .float{
 		margin-right: 0;
