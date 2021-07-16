@@ -337,6 +337,7 @@ function wpcf7_handle_recipient ($WPCF7_ContactForm) {
 
   $claim_recipient = $arrClaimRecipient[$country];
   $quote_recipient = $arrReqRecipient[$country];
+  $broker_recipient = $arrBrokerRecipient[$country];
 
   if( $country == 'trinidadandtobago')
     $career_recipient = 'vacancy.tt@massyunitedinsurance.com';
@@ -385,6 +386,11 @@ function wpcf7_handle_recipient ($WPCF7_ContactForm) {
   // Career Forms
   if( $WPCF7_ContactForm->id == 421 ){
     $mail['recipient'] = $career_recipient;
+  }
+
+    // Broker Forms
+  if( $WPCF7_ContactForm->id == 5666 ){
+    $mail['recipient'] = $broker_recipient;
   }
   
   if( isset($posted_data['pname'])){
