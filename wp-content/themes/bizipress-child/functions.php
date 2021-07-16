@@ -412,30 +412,32 @@ function pre_career_posts( $query ) {
 
     // only modify queries for 'career' post type
     if( isset($query->query_vars['post_type']) 
-    	&& (
-    		$query->query_vars['post_type'] == 'career' || 
-	    	$query->query_vars['post_type'] == 'news' || 
-	    	$query->query_vars['post_type'] == 'photo_gallery' || 
-	    	$query->query_vars['post_type'] == 'promotions'
-    	)
-    	
+        && (
+            $query->query_vars['post_type'] == 'career' || 
+            $query->query_vars['post_type'] == 'news' || 
+            $query->query_vars['post_type'] == 'photo_gallery' || 
+            $query->query_vars['post_type'] == 'promotions'
+        )        
     ) {
-	    $country = $_COOKIE['country']; 
-		$meta_query = array(
-			'relation' => 'OR',
-	        array(
-	            'key'     => 'access_country',
-	            'value'   => null,
-	            'compare' => '==',
-	        ),
-	        array(
-	            'key'     => 'access_country',
-	            'value'   => $country,
-	            'compare' => 'LIKE',
-	        )
+        $country = $_COOKIE['country']; 
+        $meta_query = array(
+            'relation' => 'OR',
+            array(
+                'key'     => 'access_country',
+                'value'   => null,
+                'compare' => '==',
+            ),
+            array(
+                'key'     => 'access_country',
+                'value'   => $country,
+                'compare' => 'LIKE',
+            )
         );
 
         $query->set( 'meta_query', $meta_query );
     }
+
+    // return
+    return $query;
 }
 add_action('pre_get_posts', 'pre_career_posts');
