@@ -384,12 +384,12 @@ ul.ubermenu-row-id-5411 > li:not(:first-child){
 	padding: 15px 30px 30px;
 }
 .slant252{
-	font: normal normal normal 20px Open Sans;
-    line-height: 35px !important;
+	font: normal normal normal 16px Open Sans;
+    line-height: 25px !important;
 }
 .slant252_small{
-	font: normal normal normal 18px Open Sans;
-    line-height: 25px !important;
+	font: normal normal normal 14px Open Sans;
+    line-height: 20px !important;
 }
 p.italic{
 	font-style: italic!important;
@@ -397,9 +397,9 @@ p.italic{
 .wpb_text_column .page-description{
     font-size: 30px !important;
     color: #FF7B00!important;
-    text-align: center;
-    width: 80%;
-    margin: 40px auto 50px;
+    text-align: left;
+    width: 100%;
+    margin: 0px;
 }
 .button_container{
 	background: #004c7c;
@@ -421,8 +421,8 @@ p.italic{
     overflow: hidden;
 }
 .tab_wrapper ul.option_list li{
-    line-height: 24px;
-    font-size: 20px;
+    line-height: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
     font-family: "Open Sans";
     display: flex;
@@ -458,7 +458,7 @@ p.italic{
     width: 100%;
     padding: 15px 0;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
 }
 .tab_content_wrapper{
 	background: #F8F8F8;
@@ -470,7 +470,7 @@ p.italic{
 	padding-top: 10px;
 }
 .tab_wrapper h3.sub_label{
-	font-size: 21px;
+	font-size: 18px;
 	line-height: 36px;
 	color: #004C7C !important;
 	font-weight: bold;
@@ -1001,8 +1001,8 @@ p.italic{
 	/* display: none; */
 }
 .post-single .entry-content p{
-	line-height: 30px !important;
-    font-size: 18px;
+	line-height: 25px !important;
+    font-size: 16px;
 }
 .tab_wrapper h2.tab_label.mobile{
 	display: none;
@@ -1018,7 +1018,7 @@ p.italic{
 	padding-top: 20px !important;
 }
 p{
-	font-size: 18px !important;
+	font-size: 16px !important;
 }
 .copyright.copyright-style-2 p{
 	font-size: 13px !important;
