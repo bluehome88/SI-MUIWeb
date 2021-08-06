@@ -1118,4 +1118,12 @@ div.vc_gitem-post-data.vc_gitem-post-data-source-post_excerpt{
         font-size: 12px;
     }    
 }
-
+@media (min-width: 767px) and (max-width: 1200px){
+	.button_container a{
+		font-size: 18px;
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    height: 106px;
+	}
+}
