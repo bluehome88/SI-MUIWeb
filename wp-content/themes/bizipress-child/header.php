@@ -19,11 +19,11 @@
 
 	<meta name="description" content="Across the Caribbean, more people are placing their trust in Massy United Insurance for the protection of the things that are most important to them – their homes, businesses and their hard-earned belongings.">
 
-	<link rel="stylesheet preload" href="https://muiweb.azurewebsites.net/wp-content/plugins/js_composer-July/assets/lib/bower/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0" as="font" type="font/woff" crossorigin="">
-	<link rel="stylesheet preload" href="https://muiweb.azurewebsites.net/wp-content/themes/bizipress/assets/fonts/iconfont/iconfont.ttf?2p4rfb" as="font" type="font/ttf" crossorigin="">
+	<link rel="stylesheet preload" href="/wp-content/plugins/js_composer-July/assets/lib/bower/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0" as="font" type="font/woff" crossorigin="">
+	<link rel="stylesheet preload" href="/wp-content/themes/bizipress/assets/fonts/iconfont/iconfont.ttf?2p4rfb" as="font" type="font/ttf" crossorigin="">
 
-	<link rel="fetch" href="https://muiweb.azurewebsites.net/wp-content/plugins/accordion-slider/public/assets/js/jquery.accordionSlider.min.js" as="script">
-	<link rel="fetch" href="https://muiweb.azurewebsites.net/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?rev=5.4.8.1" as="script" crossorigin="">
+	<link rel="fetch" href="/wp-content/plugins/accordion-slider/public/assets/js/jquery.accordionSlider.min.js" as="script">
+	<link rel="fetch" href="/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?rev=5.4.8.1" as="script" crossorigin="">
 
 
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
