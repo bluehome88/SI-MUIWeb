@@ -292,47 +292,47 @@ function wpcf7_handle_recipient ($WPCF7_ContactForm) {
 
   $arrReqRecipient = array(
       // 
-      'barbados'            => 'ameeta@simplyintense.com',
-      'trinidadandtobago'  => 'ameeta+1@simplyintense.com',
-      'antiguaandbarbuda'   => 'ameeta@simplyintense.com',
-      'dominica'            => 'ameeta@simplyintense.com',
-      'grenada'             => 'ameeta@simplyintense.com',
-      'montserrat'          => 'ameeta@simplyintense.com',
-      'stkittsandnevis'     => 'ameeta@simplyintense.com',
-      'stlucia'             => 'ameeta@simplyintense.com',
-      'stvincentandthegrenadines'   => 'ameeta@simplyintense.com',
+      'barbados'            => 'quote.bb@massyunitedinsurance.com',
+      'trinidadandtobago'  => 'quote.tt@massyunitedinsurance.com',
+      'antiguaandbarbuda'   => 'quote@massyunitedinsurance.com',
+      'dominica'            => 'quote@massyunitedinsurance.com',
+      'grenada'             => 'quote@massyunitedinsurance.com',
+      'montserrat'          => 'quote@massyunitedinsurance.com',
+      'stkittsandnevis'     => 'underwriting.skn@massyunitedinsurance.com',
+      'stlucia'             => 'quote@massyunitedinsurance.com',
+      'stvincentandthegrenadines'   => 'quote@massyunitedinsurance.com',
       //
-      'britishvirginislands'        => 'ameeta@simplyintense.com',
-      'bahamas'         => 'ameeta@simplyintense.com',
-      'caymanislands'   => 'ameeta+2@simplyintense.com',
-      'jamaica'         => 'ameeta@simplyintense.com',
-      'turksandcaicos'  => 'ameeta@simplyintense.com',
+      'britishvirginislands'        => 'quote@massyunitedinsurance.com',
+      'bahamas'         => 'quote@massyunitedinsurance.com',
+      'caymanislands'   => 'underwriting.ky@massyunitedinsurance.com',
+      'jamaica'         => 'underwriting.jm@massyunitedinsurance.com',
+      'turksandcaicos'  => 'quote@massyunitedinsurance.com',
       //
-      'guyana'          => 'ameeta@simplyintense.com',
-      'anguilla'         => 'ameeta@simplyintense.com',
-      'belize'          => 'ameeta@simplyintense.com'
+      'guyana'          => 'quote.gy@massyunitedinsurance.com',
+      'anguilla'         => 'quote@massyunitedinsurance.com',
+      'belize'          => 'quote@massyunitedinsurance.com'
   );
   $arrClaimRecipient = array(
       //
-      'barbados'            => 'ameeta@simplyintense.com',
-      'trinidadandtobago'  => 'ameeta@simplyintense.com',
-      'antiguaandbarbuda'   => 'ameeta@simplyintense.com',
-      'dominica'            => 'ameeta@simplyintense.com',
-      'grenada'             => 'ameeta@simplyintense.com',
-      'montserrat'          => 'ameeta@simplyintense.com',
-      'stkittsandnevis'     => 'ameeta@simplyintense.com',
-      'stlucia'             => 'ameeta@simplyintense.com',
-      'stvincentandthegrenadines'   => 'ameeta@simplyintense.com',
+      'barbados'            => 'claims.bb@massyunitedinsurance.com',
+      'trinidadandtobago'  => 'claims.tt@massyunitedinsurance.com',
+      'antiguaandbarbuda'   => 'claims.all@massyunitedinsurance.com',
+      'dominica'            => 'claims.all@massyunitedinsurance.com',
+      'grenada'             => 'claims.all@massyunitedinsurance.com',
+      'montserrat'          => 'claims.all@massyunitedinsurance.com',
+      'stkittsandnevis'     => 'claims.skn@massyunitedinsurance.com',
+      'stlucia'             => 'claims.all@massyunitedinsurance.com',
+      'stvincentandthegrenadines'   => 'claims.all@massyunitedinsurance.com',
       //
-      'britishvirginislands'        => 'ameeta@simplyintense.com',
-      'bahamas'         => 'ameeta@simplyintense.com',
-      'caymanislands'   => 'ameeta@simplyintense.com',
-      'jamaica'         => 'ameeta@simplyintense.com',
-      'turksandcaicos'  => 'ameeta@simplyintense.com',
+      'britishvirginislands'        => 'claims.all@massyunitedinsurance.com',
+      'bahamas'         => 'claims.all@massyunitedinsurance.com',
+      'caymanislands'   => 'claims.ky@massyunitedinsurance.com',
+      'jamaica'         => 'claims.jm@massyunitedinsurance.com',
+      'turksandcaicos'  => 'claims.all@massyunitedinsurance.com',
       //
-      'guyana'          => 'ameeta@simplyintense.com',
-      'anguilla'         => 'ameeta@simplyintense.com',
-      'belize'          => 'ameeta@simplyintense.com'
+      'guyana'          => 'claims.gy@massyunitedinsurance.com',
+      'anguilla'         => 'claims.all@massyunitedinsurance.com',
+      'belize'          => 'claims.all@massyunitedinsurance.com'
   );
   $arrBrokerRecipient = array(
       //
@@ -347,9 +347,9 @@ function wpcf7_handle_recipient ($WPCF7_ContactForm) {
   $broker_recipient = $arrBrokerRecipient[$country];
 
   if( $country == 'trinidadandtobago')
-    $career_recipient = 'ameeta@simplyintense.com';
+    $career_recipient = 'vacancy.tt@massyunitedinsurance.com';
   else
-    $career_recipient = 'ameeta@simplyintense.com';
+    $career_recipient = 'hr@massyunitedinsurance.com';
 
   $submission = WPCF7_Submission::get_instance();
 
@@ -455,3 +455,23 @@ function pre_career_posts( $query ) {
     return $query;
 }
 add_action('pre_get_posts', 'pre_career_posts');
+
+
+function user_ip_and_location()
+{
+    $client  = @$_SERVER["HTTP_CF_CONNECTING_IP"];
+    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+    $a = @$_SERVER['HTTP_X_FORWARDED'];
+    $b = @$_SERVER['HTTP_FORWARDED_FOR'];
+    $c = @$_SERVER['HTTP_FORWARDED'];
+    $d = @$_SERVER['HTTP_CLIENT_IP'];
+    $remote  = @$_SERVER['REMOTE_ADDR'];
+    
+    // $ip = '181.118.37.24';// $_SERVER['HTTP_X_CLIENT_IP'];
+    // $ip = $_SERVER['REMOTE_ADDR'];
+    
+    $ip = explode(",", $forward);
+    $ip_data = @json_decode(wp_remote_retrieve_body(wp_remote_get( "http://ip-api.com/json/".$ip[0])));
+    
+    return $ip_data;
+}
